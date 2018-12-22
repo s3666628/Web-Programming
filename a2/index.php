@@ -84,6 +84,54 @@
                     <br />
                     <figcaption>The new standard seat</figcaption>
                 </figure>
+            </p>The Cinema offers discounted pricing weekday afternoons (ie weekday matinée sessions) and all day on Mondays and Wednesdays.
+
+            </table>
+
+            <table>
+                <tr>
+                    <th>Seat Type</th>
+                    <th>Seat Code</th>
+                    <th>All day Monday and Wednesday AND 12pm on Weekday</th>
+                    <th>All other times</th>
+                </tr>
+                <tr>
+                    <th>Standard Adult</th>
+                    <th>Standard Concession</th>
+                    <th>Standard Child</th>
+                    <th>First Class Adult</th>
+                    <th>First Class Concession</th>
+                    <th>First Class Child</th>
+
+                </tr>
+                <tr>
+                    <td>STA</td>
+                    <td>STP</td>
+                    <td>SRC</td>
+                    <td>FCA</td>
+                    <td>FCP</td>
+                    <td>FCC</td>
+                </tr>
+                <tr>
+                    <td>14.00</td>
+                    <td>12.50</td>
+                    <td>11.00</td>
+                    <td>24.00</td>
+                    <td>22.50</td>
+                    <td>21.00</td>
+                </tr>
+                <tr>
+                    <td>19.80</td>
+                    <td>17.50</td>
+                    <td>15.30</td>
+                    <td>30.00</td>
+                    <td>27.00</td>
+                    <td>24.00</td>
+                </tr>
+
+            </table>
+            <p>
+
             </p>
 
         </article>
