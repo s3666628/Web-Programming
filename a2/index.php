@@ -55,38 +55,41 @@
 
         <article id='seats'>
             <h2>Seats and Prices</h2>
-            <p>We now offer two types of seating, Standard and First-Class, both offer much improved levels of comformt and relaxation.
-                <h4>First-Class Seat Features</h4>
-                <ul>
-                    <li>luxurious aesthetic</li>
-                    <li>fully reclining seat</li>
-                    <li>two individual motors</li>
-                    <li>central processor</li>
-                    <li>footrest sensor option</li>
-                    <li>easy lift system</li>
-                    <li>underseat lighting</li>
-                    <li>auto-return footrest option</li>
-                </ul>
-                <figure>
-                    <img src="first-class_Verona-Twin.png" alt="First Class Seat" />
-                    <br />
-                    <figcaption>The new first-class seat with motorised recline</figcaption>
-                </figure>
+            <p>
+                We now offer two types of seating, Standard and First-Class, both offer much improved levels of comformt and relaxation. </p>
+            <h4>First-Class Seat Features</h4>
+            <ul>
+                <li>Luxurious aesthetic</li>
+                <li>Fully reclining seat</li>
+                <li>Two individual motors</li>
+                <li>Central processor</li>
+                <li>Footrest sensor option</li>
+                <li>Easy lift system</li>
+                <li>Underseat lighting</li>
+                <li>Auto-return footrest option</li>
+            </ul>
+            <figure>
+                <img src="first-class_Verona-Twin.png" alt="First Class Seat" />
+                <br />
+                <figcaption>The new first-class seat with motorised recline</figcaption>
+            </figure>
 
-                <h4>Standard Class Seat Features</h4>
-                <ul>
-                    <li>Leather headrest for extended durability</li>
-                    <li>Multi-angled positioned backrest</li>
-                    <li>No finger traps</li>
-                </ul>
-                <figure>
-                    <img src="standard-seat.jpg" alt="Standard Seat" />
-                    <br />
-                    <figcaption>The new standard seat</figcaption>
-                </figure>
-            </p>The Cinema offers discounted pricing weekday afternoons (ie weekday matinée sessions) and all day on Mondays and Wednesdays.
+            <h4>Standard Class Seat Features</h4>
+            <ul>
+                <li>Leather headrest for extended durability</li>
+                <li>Multi-angled positioned backrest</li>
+                <li>No finger traps</li>
+            </ul>
+            <figure>
+                <img src="standard-seat.jpg" alt="Standard Seat" />
+                <br />
+                <figcaption>The new standard seat</figcaption>
+            </figure>
 
-            </table>
+            <p>The Cinema offers discounted pricing weekday afternoons (ie weekday matinée sessions) and all day on Mondays and Wednesdays. </p>
+
+
+
 
             <table>
                 <tr>
@@ -97,42 +100,49 @@
                 </tr>
                 <tr>
                     <th>Standard Adult</th>
-                    <th>Standard Concession</th>
-                    <th>Standard Child</th>
-                    <th>First Class Adult</th>
-                    <th>First Class Concession</th>
-                    <th>First Class Child</th>
-
-                </tr>
-                <tr>
                     <td>STA</td>
-                    <td>STP</td>
-                    <td>SRC</td>
-                    <td>FCA</td>
-                    <td>FCP</td>
-                    <td>FCC</td>
-                </tr>
-                <tr>
                     <td>14.00</td>
-                    <td>12.50</td>
-                    <td>11.00</td>
-                    <td>24.00</td>
-                    <td>22.50</td>
-                    <td>21.00</td>
+                    <td>19.80</td>
+
                 </tr>
                 <tr>
-                    <td>19.80</td>
+                    <th>Standard Concession</th>
+                    <td>STP</td>
+                    <td>12.50</td>
                     <td>17.50</td>
-                    <td>15.30</td>
-                    <td>30.00</td>
-                    <td>27.00</td>
-                    <td>24.00</td>
+
                 </tr>
+                <tr>
+                    <th>Standard Child</th>
+                    <td>STC</td>
+                    <td>11.00</td>
+                    <td>15.30</td>
 
+                </tr>
+                <tr>
+                    <th>First Class Adult</th>
+                    <td>FCA</td>
+                    <td>24.00</td>
+                    <td>30.00</td>
+
+                </tr>
+                <tr>
+                    <th>First Class Concession</th>
+                    <td>FCP</td>
+                    <td>22.50</td>
+                    <td>27.00</td>
+
+                </tr>
+                <tr>
+                    <th>First Class Child</th>
+                    <td>FCC</td>
+                    <td>21.00</td>
+                    <td>24.00</td>
+
+                </tr>
             </table>
-            <p>
 
-            </p>
+
 
         </article>
         <article id='showing'>
