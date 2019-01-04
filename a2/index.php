@@ -17,19 +17,21 @@
 
     <header>
         <div>
-            <h1 id="top">The Lunardo Cinema<img src="lunardo_logo.png" alt="lunardo logo" height="100" width="100"> </h1>
-            <h3>The true cinema experience</h3>
+            <h1 id="top">The Lunardo Cinema<img src="lunardo_logo2.png" alt="lunardo logo" height="100" width="100"> </h1>
+            <h2 id="tagline">The real cinema experience, since 1922</h2>
         </div>
     </header>
 
-    <nav>
-        <div>
-            <a href="#about">About Us</a> |
-            <a href="#seats">Seats and Prices</a> |
-            <a href="#showing">Now Showing</a> |
-            <a href="#booking">Booking</a> |
+
+        <div id="nav">
+            <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#seats">Seats and Prices</a></li>
+            <li><a href="#showing">Now Showing</a></li>
+            <li><a href="#booking">Booking</a></li>
+            </ul>    
         </div>
-    </nav>
+
 
     <main>
         <article id='about'>
@@ -37,7 +39,7 @@
             <p>The Lunardo Cinema was first opened in August 1922, when it was called 'The Portland' and was popular with locals and out-of-towners who would travel from far and wide to experience the magic of the motion picture in one of the finest examples of art deco architecture. At the time of its opening it was one of the only cinemas in Victoria able to show movies in <a href='https://en.wikipedia.org/wiki/70_mm_film' target="_blank">70 mm</a> - a higher resolution film gauge than standard 35mm film. Since that time, we have been a firm favourite with movie-buffs and cinema goers looking to see the magic of movies presented as the film makers intended.
                 <figure>
                     <!-- Image of portland cinema sourced from https://www.freeimages.com/ all pictures are royalty free-->
-                    <img src="old-portland-cinema.jpg" alt="The Lunardo Cinema" />
+                    <img src="old-portland-cinema.jpg" width="350" height="350" alt="The Lunardo Cinema" />
                     <br />
                     <figcaption>The Lunardo Cinema</figcaption>
                 </figure>
@@ -58,7 +60,7 @@
             <p>
                 We now offer two types of seating, Standard and First-Class, both offer much improved levels of comformt and relaxation. </p>
             <h4>First-Class Seat Features</h4>
-            <ul>
+            <ul class="seat_list">
                 <li>Luxurious aesthetic</li>
                 <li>Fully reclining seat</li>
                 <li>Two individual motors</li>
@@ -69,19 +71,19 @@
                 <li>Auto-return footrest option</li>
             </ul>
             <figure>
-                <img src="first-class_Verona-Twin.png" alt="First Class Seat" />
+                <img src="first-class_Verona-Twin.png" width="350" height="350" alt="First Class Seat" />
                 <br />
                 <figcaption>The new first-class seat with motorised recline</figcaption>
             </figure>
 
             <h4>Standard Class Seat Features</h4>
-            <ul>
+            <ul class="seat_list">
                 <li>Leather headrest for extended durability</li>
                 <li>Multi-angled positioned backrest</li>
                 <li>No finger traps</li>
             </ul>
             <figure>
-                <img src="standard-seat.jpg" alt="Standard Seat" />
+                <img src="standard-seat.jpg" width="450" height="350" alt="Standard Seat" />
                 <br />
                 <figcaption>The new standard seat</figcaption>
             </figure>
@@ -148,6 +150,149 @@
         <article id='showing'>
             <h2>Now Showing</h2>
 
+            <!--            this code was sourced from W3 Schools
+https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
+-->
+
+            <div class="row">
+                <div class="column">
+                    <h2>Column</h2>
+                    <img src="The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
+
+                    <table>
+                        <tr>
+                            <th>The Girl in the Spider's Web (G)</th>
+
+                        </tr>
+                        <tr>
+                            <td>Wednesday - 9 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thurday - 9 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday - 9 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday - 6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday - 6 PM</td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+
+                <div class="column">
+                    <h2>Column</h2>
+                    <img src="A_Star_is_Born.png" width="330" height="489" alt="A_Star_is_Born.png" />
+
+                    <table>
+                        <tr>
+                            <th>A Star is Born (MA)</th>
+
+                        </tr>
+                        <tr>
+                            <td>Monday - 6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday - 6 PM</td>
+                        </tr>
+
+                        <tr>
+                            <td>Saturday - 3 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday - 3 PM</td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+
+                <div class="column">
+                    <h2>Column</h2>
+                    <img src="Ralph_Breaks_the_Internet_(2018_film_poster).png" width="330" height="489" alt="Ralph_Breaks_the_Internet" />
+
+                    <table>
+                        <tr>
+                            <th>Ralph Breaks the Internet (PG)</th>
+
+                        </tr>
+                        <tr>
+                            <td>Monday - 12 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday - 12 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday - 6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday - 6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday - 6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday - 12 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday - 12 PM</td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+
+                <div class="column">
+                    <h2>Column</h2>
+                    <img src="Boy_Erased_(2018_poster).png" width="330" height="489" alt="Boy_Erased" />
+
+                    <table>
+                        <tr>
+                            <th>Boy Erased (PG)</th>
+
+                        </tr>
+                        <tr>
+                            <td>Wednesday - 12 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thurday - 12 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday - 12 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday - 9 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday - 9 PM</td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+            </div>
+            <div>
+                <h2>The Girl in the Spider's Web (G)</h2>
+                <p>Young computer hacker Lisbeth Salander and journalist Mikael Blomkvist find themselves caught in a web of spies, cybercriminals and corrupt government officials.</p>
+
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKMSP9OKspQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+
+                <h3>Make a Booking:</h3>
+
+            </div>
+
+
         </article>
         <article id='booking'>
             <h2>Booking</h2>
@@ -160,6 +305,7 @@
     <footer>
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
+
             </script> Philip Beeby (s3666628), Last modified: 22/12/2018
             <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
