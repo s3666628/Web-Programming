@@ -23,14 +23,14 @@
     </header>
 
 
-        <div id="nav">
-            <ul>
+    <div id="nav">
+        <ul>
             <li><a href="#about">About Us</a></li>
             <li><a href="#seats">Seats and Prices</a></li>
             <li><a href="#showing">Now Showing</a></li>
             <li><a href="#booking">Booking</a></li>
-            </ul>    
-        </div>
+        </ul>
+    </div>
 
 
     <main>
@@ -156,7 +156,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
             <div class="row">
                 <div class="column">
-                    <h2>Column</h2>
+                    <!--                    <h2>Column</h2>-->
                     <img src="The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
 
                     <table>
@@ -186,7 +186,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                 </div>
 
                 <div class="column">
-                    <h2>Column</h2>
+                    <!--                    <h2>Column</h2>-->
                     <img src="A_Star_is_Born.png" width="330" height="489" alt="A_Star_is_Born.png" />
 
                     <table>
@@ -214,7 +214,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                 </div>
 
                 <div class="column">
-                    <h2>Column</h2>
+                    <!--                    <h2>Column</h2>-->
                     <img src="Ralph_Breaks_the_Internet_(2018_film_poster).png" width="330" height="489" alt="Ralph_Breaks_the_Internet" />
 
                     <table>
@@ -250,7 +250,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                 </div>
 
                 <div class="column">
-                    <h2>Column</h2>
+                    <!--                    <h2>Column</h2>-->
                     <img src="Boy_Erased_(2018_poster).png" width="330" height="489" alt="Boy_Erased" />
 
                     <table>
@@ -279,23 +279,126 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 </div>
             </div>
-            <div>
-                <h2>The Girl in the Spider's Web (G)</h2>
-                <p>Young computer hacker Lisbeth Salander and journalist Mikael Blomkvist find themselves caught in a web of spies, cybercriminals and corrupt government officials.</p>
+
+            <h3>The Girl in the Spider's Web (G)</h3>
+            <div class="flex-container">
 
                 <div>
+                    <p>Young computer hacker Lisbeth Salander and journalist Mikael Blomkvist find themselves caught in a web of spies, cybercriminals and corrupt government officials.</p>
+                </div>
+
+                <div id="trailer">
+
+                    <!-- the iframe information was taken from YouTube -->
+
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/XKMSP9OKspQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
                 </div>
 
-                <h3>Make a Booking:</h3>
-
             </div>
+            <h3>Make a Booking:</h3>
+            <button type="button" class="button" value="Input Button">Wed : 9PM</button>
+            <button type="button" class="button" value="Input Button">Thu : 9PM</button>
+            <button type="button" class="button" value="Input Button">Fri : 9PM</button>
+            <button type="button" class="button" value="Input Button">Sat : 6PM</button>
+            <button type="button" class="button" value="Input Button">Sun : 6PM</button>
 
 
         </article>
         <article id='booking'>
             <h2>Booking</h2>
+            <h3>The Girl in the Spider's Web (G) - Saturday 6 PM</h3>
+
+            <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+                <div>
+                    <fieldset>
+                        <legend>Standard</legend>
+                        <label for="adults">Adults</label>
+                        <select name="Adults">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <br />
+                        <label for="concession">Concession</label>
+                        <select name="Concession">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <br />
+                        <label for="children">Children</label>
+                        <select name="Children">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend>First Class</legend>
+                        <label for="adults">Adults</label>
+                        <select name="Adults">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <br />
+                        <label for="concession">Concession</label>
+                        <select name="Concession">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <br />
+                        <label for="children">Children</label>
+                        <select name="Children">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </fieldset>
+                    <br />
+                    <label for="total">Total $</label>
+                    <input type="text" name="total" maxlength="7" />
+
+                    <label for="name">Name</label>
+                    <input type="text" name="name" maxlength="20" />
+
+                    <label for="email">Email</label>
+                    <input type="text" name="email" maxlength="20" />
+
+                    <label for="mobile">mobile</label>
+                    <input type="text" name="mobile" maxlength="20" />
+
+                    <label for="credit">Credit Card</label>
+                    <input type="text" name="credit" maxlength="20" />
+
+                    <label for="depart">Expiry Date</label>
+                    <input type="date" name="expiry"/>
+                    
+                    <button type="submit" class="button" value="Submit">Submit</button>
+
+
+
+                </div>
+
+            </form>
+
+
 
         </article>
 
@@ -306,7 +409,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
 
-            </script> Philip Beeby (s3666628), Last modified: 22/12/2018
+            </script> Philip Beeby (s3666628), Last modified: 05/01/2019
             <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
