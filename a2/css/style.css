@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: lightblue;
     font-family: "AvenirNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,7 +23,8 @@ body {
 }
 
 h1 {
-    font-family: "Lucida Grande", sans-serif;
+/*    font-family: "Lucida Grande", sans-serif;*/
+    font-family: 'Cinzel Decorative', cursive;
     color: #000;
     text-align: center;
     text-transform: capitalize;
@@ -29,11 +34,12 @@ h1 {
 h2 {
     font-family: "AvenirNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 55px;
-    color: darkgrey;
-    background-color: #1596c0;
+    color: rgb(255,255,255);
+/*    background-color: #1596c0;*/
     /*    opacity: 0.1;*/
     border-radius: 5px;
     text-align: center;
+    background-image: linear-gradient(to right, #1596c0 , lightblue); /* Standard syntax (must be last) */
 }
 
 h3 {
@@ -48,8 +54,16 @@ p {
     font-size: 15px;
 }
 
+img {
+  border-radius: 8px;
+/*      width: 80%;*/
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
 #tagline {
-    font-family: "AvenirNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Playfair Display',"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     text-align: center;
     font-size: 30px;
@@ -62,6 +76,8 @@ p {
     font-weight: bold;
     font: Tahoma;
     border-radius: 5px;
+    position: sticky;
+    top: 0px;
 }
 
 #nav ul {

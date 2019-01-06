@@ -11,6 +11,8 @@
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
     <script src='../wireframe.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Playfair+Display" rel="stylesheet"> 
 </head>
 
 <body>
@@ -312,63 +314,103 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
             <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
                 <div>
+                    <input type="hidden" name="movie[id]" value="ACT"/>
+                    <input type="hidden" name="movie[day]" value="MON"/>
+<!--                    not sure this (time) is an integer-->
+                    <input type="hidden" name="movie[hour]" value=12> 
                     <fieldset>
                         <legend>Standard</legend>
-                        <label for="adults">Adults</label>
-                        <select name="Adults">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <label for="standard adult">Standard Adult</label>
+                        <select name="seats[STA]">
+                            <option value="">Please Select</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
                         </select>
                         <br />
-                        <label for="concession">Concession</label>
-                        <select name="Concession">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <label for="standard concession">Standard Concession</label>
+                        <select name="seats[STP]">
+                            <option value="">Please Select</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
                         </select>
                         <br />
-                        <label for="children">Children</label>
-                        <select name="Children">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <label for="standard child">Standard Child</label>
+                        <select name="seats[STC]">
+                            <option value="">Please Select</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
                         </select>
                     </fieldset>
                     <br />
                     <fieldset>
                         <legend>First Class</legend>
-                        <label for="adults">Adults</label>
-                        <select name="Adults">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <label for="first class adult">First Class Adult</label>
+                        <select name="seats[FCA]">
+                            <option value="">Please Select</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
                         </select>
                         <br />
-                        <label for="concession">Concession</label>
-                        <select name="Concession">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <label for="first class concession">First Class Concession</label>
+                        <select name="seats[FCP]">
+                            <option value="">Please Select</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
                         </select>
                         <br />
-                        <label for="children">Children</label>
-                        <select name="Children">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <label for="First Class Child">First Class Child</label>
+                        <select name="seats[FCC]">
+                            <option value="">Please Select</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
                         </select>
                     </fieldset>
                     <br />
@@ -376,21 +418,21 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <input type="text" name="total" maxlength="7" />
 
                     <label for="name">Name</label>
-                    <input type="text" name="name" maxlength="20" />
+                    <input type="text" name="cust[name]" maxlength="20" />
 
                     <label for="email">Email</label>
-                    <input type="text" name="email" maxlength="20" />
+                    <input type="email" name="cust[email]" maxlength="200" />
 
                     <label for="mobile">mobile</label>
-                    <input type="text" name="mobile" maxlength="20" />
+                    <input type="tel" name="cust[mobile]" maxlength="20" />
 
-                    <label for="credit">Credit Card</label>
-                    <input type="text" name="credit" maxlength="20" />
+                    <label for="credit card">Credit Card</label>
+                    <input type="text" name="cust[card]" maxlength="19" />
 
-                    <label for="depart">Expiry Date</label>
-                    <input type="date" name="expiry"/>
-                    
-                    <button type="submit" class="button" value="Submit">Submit</button>
+                    <label for="expiry date">Expiry Date</label>
+                    <input type="month" name="cust[expiry]" />
+
+                    <button type="submit" name="order" class="button" value="Submit">Order</button>
 
 
 
@@ -408,8 +450,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <footer>
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
-
-            </script> Philip Beeby (s3666628), Last modified: 05/01/2019
+            </script> Philip Beeby (s3666628), Last modified: 06/01/2019
             <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
