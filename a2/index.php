@@ -19,7 +19,7 @@
 
     <header>
         <div>
-            <h1 id="top">The Lunardo Cinema<img src="lunardo_logo2.png" alt="lunardo logo" height="100" width="100"> </h1>
+            <h1 id="top">The Lunardo Cinema<img src="../../media/lunardo_logo2.png" alt="lunardo logo" height="100" width="100"> </h1>
             <h2 id="tagline">The real cinema experience, since 1922</h2>
         </div>
     </header>
@@ -41,7 +41,7 @@
             <p>The Lunardo Cinema was first opened in August 1922, when it was called 'The Portland' and was popular with locals and out-of-towners who would travel from far and wide to experience the magic of the motion picture in one of the finest examples of art deco architecture. At the time of its opening it was one of the only cinemas in Victoria able to show movies in <a href='https://en.wikipedia.org/wiki/70_mm_film' target="_blank">70 mm</a> - a higher resolution film gauge than standard 35mm film. Since that time, we have been a firm favourite with movie-buffs and cinema goers looking to see the magic of movies presented as the film makers intended.
                 <figure>
                     <!-- Image of portland cinema sourced from https://www.freeimages.com/ all pictures are royalty free-->
-                    <img src="old-portland-cinema.jpg" width="350" height="350" alt="The Lunardo Cinema" />
+                    <img src="../../media/old-portland-cinema.jpg" width="350" height="350" alt="The Lunardo Cinema" />
                     <br />
                     <figcaption>The Lunardo Cinema</figcaption>
                 </figure>
@@ -73,7 +73,7 @@
                 <li>Auto-return footrest option</li>
             </ul>
             <figure>
-                <img src="first-class_Verona-Twin.png" width="350" height="350" alt="First Class Seat" />
+                <img src="../../media/first-class_Verona-Twin.png" width="350" height="350" alt="First Class Seat" />
                 <br />
                 <figcaption>The new first-class seat with motorised recline</figcaption>
             </figure>
@@ -85,7 +85,7 @@
                 <li>No finger traps</li>
             </ul>
             <figure>
-                <img src="standard-seat.jpg" width="450" height="350" alt="Standard Seat" />
+                <img src="../../media/standard-seat.jpg" width="450" height="350" alt="Standard Seat" />
                 <br />
                 <figcaption>The new standard seat</figcaption>
             </figure>
@@ -159,7 +159,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <div class="row">
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img src="The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
+                    <img src="../../media/The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
 
                     <table>
                         <tr>
@@ -189,7 +189,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img src="A_Star_is_Born.png" width="330" height="489" alt="A_Star_is_Born.png" />
+                    <img src="../../media/A_Star_is_Born.png" width="330" height="489" alt="A_Star_is_Born.png" />
 
                     <table>
                         <tr>
@@ -217,7 +217,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img src="Ralph_Breaks_the_Internet_(2018_film_poster).png" width="330" height="489" alt="Ralph_Breaks_the_Internet" />
+                    <img src="../../media/Ralph_Breaks_the_Internet_(2018_film_poster).png" width="330" height="489" alt="Ralph_Breaks_the_Internet" />
 
                     <table>
                         <tr>
@@ -253,7 +253,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img src="Boy_Erased_(2018_poster).png" width="330" height="489" alt="Boy_Erased" />
+                    <img src="../../media/Boy_Erased_(2018_poster).png" width="330" height="489" alt="Boy_Erased" />
 
                     <table>
                         <tr>
