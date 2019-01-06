@@ -11,8 +11,8 @@
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
     <script src='../wireframe.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-<!--    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Slabo+27px|" rel="stylesheet">
 </head>
 
 <body>
