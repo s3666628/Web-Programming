@@ -12,7 +12,7 @@
     <script src='../wireframe.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
 <!--    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Playfair+Display" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Slabo+27px" rel="stylesheet">
 </head>
 
 <body>
@@ -105,43 +105,43 @@
                 <tr>
                     <th>Standard Adult</th>
                     <td>STA</td>
-                    <td>14.00</td>
-                    <td>19.80</td>
+                    <td>$ 14.00</td>
+                    <td>$ 19.80</td>
 
                 </tr>
                 <tr>
                     <th>Standard Concession</th>
                     <td>STP</td>
-                    <td>12.50</td>
-                    <td>17.50</td>
+                    <td>$ 12.50</td>
+                    <td>$ 17.50</td>
 
                 </tr>
                 <tr>
                     <th>Standard Child</th>
                     <td>STC</td>
-                    <td>11.00</td>
-                    <td>15.30</td>
+                    <td>$ 11.00</td>
+                    <td>$ 15.30</td>
 
                 </tr>
                 <tr>
                     <th>First Class Adult</th>
                     <td>FCA</td>
-                    <td>24.00</td>
-                    <td>30.00</td>
+                    <td>$ 24.00</td>
+                    <td>$ 30.00</td>
 
                 </tr>
                 <tr>
                     <th>First Class Concession</th>
                     <td>FCP</td>
-                    <td>22.50</td>
-                    <td>27.00</td>
+                    <td>$ 22.50</td>
+                    <td>$ 27.00</td>
 
                 </tr>
                 <tr>
                     <th>First Class Child</th>
                     <td>FCC</td>
-                    <td>21.00</td>
-                    <td>24.00</td>
+                    <td>$ 21.00</td>
+                    <td>$ 24.00</td>
 
                 </tr>
             </table>
