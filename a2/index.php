@@ -281,6 +281,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 </div>
             </div>
+                        <hr class="line">
 
             <h3>The Girl in the Spider's Web (G)</h3>
             <div class="flex-container">
@@ -292,11 +293,13 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <p>Rated - MA (Mature Audiences)</p>
                 </div>
 
-                <div id="trailer">
+                <div id="trailer_detail">
 
                     <!-- the iframe information was taken from YouTube -->
+<!--                    <span id="trailer_detail">-->
 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/XKMSP9OKspQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--                        </span>-->
 
 
                 </div>
@@ -313,6 +316,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
         </article>
         <article id='booking'>
             <h2>Booking</h2>
+            <hr class="line">
             <h3>The Girl in the Spider's Web (G) - Saturday 6 PM</h3>
 
             <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
@@ -323,7 +327,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <input type="hidden" name="movie[hour]" value=12>
                     <fieldset>
                         <legend>Standard</legend>
-                        <label for="standard adult">Standard Adult</label>
+                        <label id="standard_adult" for="standard adult">Standard Adult</label>
                         <select name="seats[STA]">
                             <option value="">Please Select</option>
                             <option value=1>1</option>
@@ -338,7 +342,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             <option value=10>10</option>
                         </select>
                         <br />
-                        <label for="standard concession">Standard Concession</label>
+                        <label id="standard_concession" for="standard concession">Standard Concession</label>
                         <select name="seats[STP]">
                             <option value="">Please Select</option>
                             <option value=1>1</option>
@@ -353,7 +357,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             <option value=10>10</option>
                         </select>
                         <br />
-                        <label for="standard child">Standard Child</label>
+                        <label id="standard_child" for="standard child">Standard Child</label>
                         <select name="seats[STC]">
                             <option value="">Please Select</option>
                             <option value=1>1</option>
@@ -371,7 +375,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <br />
                     <fieldset>
                         <legend>First Class</legend>
-                        <label for="first class adult">First Class Adult</label>
+                        <label id="first_class_adult" for="first class adult">First Class Adult</label>
                         <select name="seats[FCA]">
                             <option value="">Please Select</option>
                             <option value=1>1</option>
@@ -386,7 +390,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             <option value=10>10</option>
                         </select>
                         <br />
-                        <label for="first class concession">First Class Concession</label>
+                        <label id="first_class_concession" for="first class concession">First Class Concession</label>
                         <select name="seats[FCP]">
                             <option value="">Please Select</option>
                             <option value=1>1</option>
@@ -401,7 +405,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             <option value=10>10</option>
                         </select>
                         <br />
-                        <label for="First Class Child">First Class Child</label>
+                        <label id="first_class_child" for="first class child">First Class Child</label>
                         <select name="seats[FCC]">
                             <option value="">Please Select</option>
                             <option value=1>1</option>
@@ -435,7 +439,9 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <label for="expiry date">Expiry Date</label>
                     <input type="month" name="cust[expiry]" />
 
+
                     <button type="submit" name="order" class="button" value="Submit">Order</button>
+
 
 
 

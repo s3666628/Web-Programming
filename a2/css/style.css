@@ -61,6 +61,7 @@ h2 {
     text-shadow: 1px 1px lightgrey;
     background-image: none;
     padding: 10px;
+    margin: black;
 }
 
 h3 {
@@ -75,6 +76,11 @@ h4 {
     font-size: 20px;
     border-radius: 5px;
     text-decoration-color: burlywood border-radius: 5px;
+}
+
+.line {
+    color: lightblue;
+
 }
 
 p {
@@ -199,10 +205,20 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
 .flex-container#trailer iframe {
     display: block;
+    align-content: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
 
+}
+div.flex-container{
+    align-content: center;
+}
+div #trailer{
+    align-content: center;
+}
+div #trailer_detail{
+    align-content: center;
 }
 
 /*Styles the tables*/
@@ -251,11 +267,18 @@ footer {
 
 }
 
-#form div{
+#standard_adult,
+#standard_concession,
+#standard_child {
     display: inline-block;
-    width: 100px;
+    width: 162px;
+}
 
-
+#first_class_adult,
+#first_class_concession,
+#first_class_child {
+    display: inline-block;
+    width: 162px;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
