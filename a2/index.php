@@ -286,7 +286,10 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <div class="flex-container">
 
                 <div>
+                    <h4>Movie Synopsis</h4>
                     <p>Young computer hacker Lisbeth Salander and journalist Mikael Blomkvist find themselves caught in a web of spies, cybercriminals and corrupt government officials.</p>
+                    <p>Running Time - 155 mins</p>
+                    <p>Rated - MA (Mature Audiences)</p>
                 </div>
 
                 <div id="trailer">
@@ -314,10 +317,10 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
             <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
                 <div>
-                    <input type="hidden" name="movie[id]" value="ACT"/>
-                    <input type="hidden" name="movie[day]" value="MON"/>
-<!--                    not sure this (time) is an integer-->
-                    <input type="hidden" name="movie[hour]" value=12> 
+                    <input type="hidden" name="movie[id]" value="ACT" />
+                    <input type="hidden" name="movie[day]" value="MON" />
+                    <!--                    not sure this (time) is an integer-->
+                    <input type="hidden" name="movie[hour]" value=12>
                     <fieldset>
                         <legend>Standard</legend>
                         <label for="standard adult">Standard Adult</label>
@@ -450,6 +453,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <footer>
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
+
             </script> Philip Beeby (s3666628), Last modified: 06/01/2019
             <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
