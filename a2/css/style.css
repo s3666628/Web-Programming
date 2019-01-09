@@ -23,6 +23,9 @@ body {
     background-repeat: no-repeat;
 }
 
+
+
+
 h1 {
     /*    font-family: "Lucida Grande", sans-serif;*/
     font-family: 'Cinzel Decorative', cursive;
@@ -93,10 +96,18 @@ img {
     /*      width: 80%;*/
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
+#logo {
+    /*    border-radius: 8px;*/
+    /*      width: 80%;*/
+    /*    background-color: #F6F6F6;*/
+    /*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    margin-bottom: 25px;
+    text-align: center;
 
+}
 
 #nav {
     background-color: #1596c0;
@@ -211,13 +222,16 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     border-radius: 5px;
 
 }
-div.flex-container{
+
+div.flex-container {
     align-content: center;
 }
-div #trailer{
+
+div #trailer {
     align-content: center;
 }
-div #trailer_detail{
+
+div #trailer_detail {
     align-content: center;
 }
 
@@ -230,17 +244,25 @@ th {
     border: 1px solid #ddd;
     text-align: left;
     background-color: antiquewhite;
+
+
+    */
 }
 
 th {
     background-color: lightgray;
     text-align: center;
     font-weight: 700;
+    /*
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+*/
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
+
 }
 
 th,
@@ -263,8 +285,20 @@ footer {
     background-color: #1596c0;
     color: white;
     opacity: 0.5;
-    text-align: justify;
+    text-align: center;
 
+}
+
+#disclaimer {
+    text-align: left;
+    font-style: italic;
+
+}
+
+figcaption {
+    text-indent: 10px;
+    font-style: italic;
+    font-size: 16px;
 }
 
 #standard_adult,
@@ -280,6 +314,24 @@ footer {
     display: inline-block;
     width: 162px;
 }
+
+#name,
+#email,
+#mobile,
+#cc,
+#expiry
+{
+    display: inline-block;
+    width: 100px;
+}
+#total
+{
+    display: inline-block;
+    width: 100px;
+    text-indent: 16px;
+    padding-right: 10px;
+}
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {

@@ -18,8 +18,11 @@
 <body>
 
     <header>
+
+
         <div>
-            <h1 id="top">The Lunardo Cinema<img src="../../media/lunardo_logo2.png" alt="lunardo logo" height="100" width="100"> </h1>
+
+            <h1 id="top">The Lunardo Cinema</h1>
             <h2 id="tagline">The real cinema experience, since 1922</h2>
         </div>
     </header>
@@ -281,7 +284,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 </div>
             </div>
-                        <hr class="line">
+            <hr class="line">
 
             <h3>The Girl in the Spider's Web (G)</h3>
             <div class="flex-container">
@@ -296,10 +299,10 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                 <div id="trailer_detail">
 
                     <!-- the iframe information was taken from YouTube -->
-<!--                    <span id="trailer_detail">-->
+                    <!--                    <span id="trailer_detail">-->
 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/XKMSP9OKspQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<!--                        </span>-->
+                    <!--                        </span>-->
 
 
                 </div>
@@ -421,27 +424,32 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         </select>
                     </fieldset>
                     <br />
-                    <label for="total">Total $</label>
+
+
+                    <fieldset>
+                        <label id="name" for="name">Name</label>
+                        <input type="text" name="cust[name]" maxlength="20" />
+                        <br />
+                        <label id="email" for="email">Email</label>
+                        <input type="email" name="cust[email]" maxlength="200" />
+                        <br />
+                        <label id="mobile" for="mobile">mobile</label>
+                        <input type="tel" name="cust[mobile]" maxlength="20" />
+                        <br />
+                        <label id="cc" for="credit card">Credit Card</label>
+                        <input type="text" name="cust[card]" maxlength="19" />
+                        <br />
+                        <label id="expiry" for="expiry date">Expiry Date</label>
+                        <input type="month" name="cust[expiry]" />
+                    </fieldset>
+                    
+                    <fieldset>
+                    <label id="total" for="total">Total $</label>
                     <input type="text" name="total" maxlength="7" />
 
-                    <label for="name">Name</label>
-                    <input type="text" name="cust[name]" maxlength="20" />
+                    <button id="submit"type="submit" name="order" class="button" value="Submit">Order</button>
 
-                    <label for="email">Email</label>
-                    <input type="email" name="cust[email]" maxlength="200" />
-
-                    <label for="mobile">mobile</label>
-                    <input type="tel" name="cust[mobile]" maxlength="20" />
-
-                    <label for="credit card">Credit Card</label>
-                    <input type="text" name="cust[card]" maxlength="19" />
-
-                    <label for="expiry date">Expiry Date</label>
-                    <input type="month" name="cust[expiry]" />
-
-
-                    <button type="submit" name="order" class="button" value="Submit">Order</button>
-
+                        </fieldset>
 
 
 
@@ -460,10 +468,18 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
 
-            </script> Philip Beeby (s3666628), Last modified: 06/01/2019
-            <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-        <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+            </script>
+
+            <div>Philip Beeby (s3666628), Last modified: 06/01/2019
+                <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+        </div>
+        <br />
+        <div id="logo"><img src="../../media/lunardo_logo3.png" alt="lunardo logo" height="60" width="100"> </div>
+
+
+        <div id="disclaimer">Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+
     </footer>
 
 </body>
