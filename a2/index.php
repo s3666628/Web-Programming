@@ -286,20 +286,21 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             </div>
             <hr class="line">
 
-            <h3>The Girl in the Spider's Web (G)</h3>
+
             <div class="flex-container">
 
                 <div>
+                    <h3>The Girl in the Spider's Web (G)</h3>
                     <h4>Movie Synopsis</h4>
                     <p>A new Dragon Tattoo story comes to the screen starring Claire Foy ("The Crown") as Lisbeth Salander, the fierce, outcast vigilante defender from the acclaimed Millennium book series created by Stieg Larsson, in The Girl in the Spider's Web. A first-time adaptation of the recent global bestseller, the film is directed by Fede Alvarez, the director of 2016's breakout thriller Don't Breathe; the screenplay adaptation is by Jay Basu &amp; Fede Alvarez and Steven Knight.
-<p>DIRECTED BY Fede Alvarez </p>
-<p>SCREENPLAY BY Jay Basu &amp; Fede Alvarez and Steven Knight </p>
-<p>PRODUCED BY Scott Rudin, Eli Bush, Ole Søndberg, Søren Stærmose, Berna Levin, Amy Pascal, Elizabeth Cantillon
-EXECUTIVE PRODUCERS Arnon Milchan, Robert J. Dohrmann, David Fincher, Line Winther Skyum Funch, Johannes Jensen, Anni Faurbye Fernandez</p>
-<p>CAST
-Claire Foy, Sverrir Gudnason, Lakeith Stanfield, Sylvia Hoeks, Stephen Merchant </p>
-                    <p>Running Time - 155 mins</p>
-                    <p>Rated - MA (Mature Audiences)</p>
+                        <p>DIRECTED BY Fede Alvarez </p>
+                        <p>SCREENPLAY BY Jay Basu &amp; Fede Alvarez and Steven Knight </p>
+                        <p>PRODUCED BY Scott Rudin, Eli Bush, Ole Søndberg, Søren Stærmose, Berna Levin, Amy Pascal, Elizabeth Cantillon
+                            EXECUTIVE PRODUCERS Arnon Milchan, Robert J. Dohrmann, David Fincher, Line Winther Skyum Funch, Johannes Jensen, Anni Faurbye Fernandez</p>
+                        <p>CAST
+                            Claire Foy, Sverrir Gudnason, Lakeith Stanfield, Sylvia Hoeks, Stephen Merchant </p>
+                        <p>Running Time - 155 mins</p>
+                        <p>Rated - MA (Mature Audiences)</p>
                 </div>
 
                 <div id="trailer_detail">
@@ -313,7 +314,11 @@ Claire Foy, Sverrir Gudnason, Lakeith Stanfield, Sylvia Hoeks, Stephen Merchant 
 
                 </div>
 
+
+
             </div>
+
+
             <h3>Make a Booking:</h3>
             <button type="button" class="button" value="Input Button">Wed : 9PM</button>
             <button type="button" class="button" value="Input Button">Thu : 9PM</button>
@@ -321,12 +326,11 @@ Claire Foy, Sverrir Gudnason, Lakeith Stanfield, Sylvia Hoeks, Stephen Merchant 
             <button type="button" class="button" value="Input Button">Sat : 6PM</button>
             <button type="button" class="button" value="Input Button">Sun : 6PM</button>
 
-
         </article>
         <article id='booking'>
             <h2>Booking</h2>
             <hr class="line">
-            <h3>The Girl in the Spider's Web (G) - Saturday 6 PM</h3>
+
 
             <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
                 <div>
@@ -335,127 +339,131 @@ Claire Foy, Sverrir Gudnason, Lakeith Stanfield, Sylvia Hoeks, Stephen Merchant 
                     <!--                    not sure this (time) is an integer-->
                     <input type="hidden" name="movie[hour]" value=12>
                     <fieldset>
-                        <legend>Standard</legend>
-                        <label id="standard_adult" for="standard adult">Standard Adult</label>
-                        <select name="seats[STA]">
-                            <option value="">Please Select</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                            <option value=6>6</option>
-                            <option value=7>7</option>
-                            <option value=8>8</option>
-                            <option value=9>9</option>
-                            <option value=10>10</option>
-                        </select>
+                        <h3>The Girl in the Spider's Web (G) - Saturday 6 PM</h3>
+                        <fieldset>
+                            <legend>Standard</legend>
+                            <label id="standard_adult" for="standard adult">Standard Adult</label>
+                            <select name="seats[STA]">
+                                <option value="">Please Select</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                                <option value=10>10</option>
+                            </select>
+                            <br />
+                            <label id="standard_concession" for="standard concession">Standard Concession</label>
+                            <select name="seats[STP]">
+                                <option value="">Please Select</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                                <option value=10>10</option>
+                            </select>
+                            <br />
+                            <label id="standard_child" for="standard child">Standard Child</label>
+                            <select name="seats[STC]">
+                                <option value="">Please Select</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                                <option value=10>10</option>
+                            </select>
+                        </fieldset>
                         <br />
-                        <label id="standard_concession" for="standard concession">Standard Concession</label>
-                        <select name="seats[STP]">
-                            <option value="">Please Select</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                            <option value=6>6</option>
-                            <option value=7>7</option>
-                            <option value=8>8</option>
-                            <option value=9>9</option>
-                            <option value=10>10</option>
-                        </select>
+                        <fieldset>
+                            <legend>First Class</legend>
+                            <label id="first_class_adult" for="first class adult">First Class Adult</label>
+                            <select name="seats[FCA]">
+                                <option value="">Please Select</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                                <option value=10>10</option>
+                            </select>
+                            <br />
+                            <label id="first_class_concession" for="first class concession">First Class Concession</label>
+                            <select name="seats[FCP]">
+                                <option value="">Please Select</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                                <option value=10>10</option>
+                            </select>
+                            <br />
+                            <label id="first_class_child" for="first class child">First Class Child</label>
+                            <select name="seats[FCC]">
+                                <option value="">Please Select</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                                <option value=10>10</option>
+                            </select>
+                        </fieldset>
                         <br />
-                        <label id="standard_child" for="standard child">Standard Child</label>
-                        <select name="seats[STC]">
-                            <option value="">Please Select</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                            <option value=6>6</option>
-                            <option value=7>7</option>
-                            <option value=8>8</option>
-                            <option value=9>9</option>
-                            <option value=10>10</option>
-                        </select>
-                    </fieldset>
-                    <br />
-                    <fieldset>
-                        <legend>First Class</legend>
-                        <label id="first_class_adult" for="first class adult">First Class Adult</label>
-                        <select name="seats[FCA]">
-                            <option value="">Please Select</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                            <option value=6>6</option>
-                            <option value=7>7</option>
-                            <option value=8>8</option>
-                            <option value=9>9</option>
-                            <option value=10>10</option>
-                        </select>
-                        <br />
-                        <label id="first_class_concession" for="first class concession">First Class Concession</label>
-                        <select name="seats[FCP]">
-                            <option value="">Please Select</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                            <option value=6>6</option>
-                            <option value=7>7</option>
-                            <option value=8>8</option>
-                            <option value=9>9</option>
-                            <option value=10>10</option>
-                        </select>
-                        <br />
-                        <label id="first_class_child" for="first class child">First Class Child</label>
-                        <select name="seats[FCC]">
-                            <option value="">Please Select</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                            <option value=6>6</option>
-                            <option value=7>7</option>
-                            <option value=8>8</option>
-                            <option value=9>9</option>
-                            <option value=10>10</option>
-                        </select>
-                    </fieldset>
-                    <br />
 
 
-                    <fieldset>
-                        <label id="name" for="name">Name</label>
-                        <input type="text" name="cust[name]" maxlength="20" />
-                        <br />
-                        <label id="email" for="email">Email</label>
-                        <input type="email" name="cust[email]" maxlength="200" />
-                        <br />
-                        <label id="mobile" for="mobile">mobile</label>
-                        <input type="tel" name="cust[mobile]" maxlength="20" />
-                        <br />
-                        <label id="cc" for="credit card">Credit Card</label>
-                        <input type="text" name="cust[card]" maxlength="19" />
-                        <br />
-                        <label id="expiry" for="expiry date">Expiry Date</label>
-                        <input type="month" name="cust[expiry]" />
-                    </fieldset>
-                    
-                    <fieldset>
-                    <label id="total" for="total">Total $</label>
-                    <input type="text" name="total" maxlength="7" />
+                        <fieldset>
+                            <label id="name" for="name">Name</label>
+                            <input type="text" name="cust[name]" maxlength="20" />
+                            <br />
+                            <label id="email" for="email">Email</label>
+                            <input type="email" name="cust[email]" maxlength="200" />
+                            <br />
+                            <label id="mobile" for="mobile">mobile</label>
+                            <input type="tel" name="cust[mobile]" maxlength="20" />
+                            <br />
+                            <label id="cc" for="credit card">Credit Card</label>
+                            <input type="text" name="cust[card]" maxlength="19" />
+                            <br />
+                            <label id="expiry" for="expiry date">Expiry Date</label>
+                            <input type="month" name="cust[expiry]" />
+                        </fieldset>
 
-                    <button id="submit"type="submit" name="order" class="button" value="Submit">Order</button>
+                        <fieldset>
+                            <label id="total" for="total">Total $</label>
+                            <input type="text" name="total" maxlength="7" />
+
+                            <button id="submit" type="submit" name="order" class="button" value="Submit">Order</button>
 
                         </fieldset>
+
+                    </fieldset>
 
 
 
@@ -473,7 +481,6 @@ Claire Foy, Sverrir Gudnason, Lakeith Stanfield, Sylvia Hoeks, Stephen Merchant 
     <footer>
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
-
             </script>
 
             <div>Philip Beeby (s3666628), Last modified: 06/01/2019
