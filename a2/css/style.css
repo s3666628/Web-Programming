@@ -274,7 +274,7 @@ footer {
 }
 
 #disclaimer {
-    text-align: left;
+    text-align: center;
     font-style: italic;
 
 }
@@ -334,6 +334,8 @@ figcaption {
   box-sizing: border-box;
 }
 */
+/*the mobile configuration code was copied from the following site to try and get the site working correctly on iPhones*/
+/*https://css-tricks.com/snippets/css/media-queries-for-standard-devices/*/
 
 /* Portrait and Landscape */
 @media only screen 
