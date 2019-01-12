@@ -291,7 +291,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div>
                     <h3>The Girl in the Spider's Web (G)</h3>
-                    <h4>Movie Synopsis</h4>
+<!--                    <h4>Movie Synopsis</h4>-->
                     <p>A new Dragon Tattoo story comes to the screen starring Claire Foy ("The Crown") as Lisbeth Salander, the fierce, outcast vigilante defender from the acclaimed Millennium book series created by Stieg Larsson, in The Girl in the Spider's Web. A first-time adaptation of the recent global bestseller, the film is directed by Fede Alvarez, the director of 2016's breakout thriller Don't Breathe; the screenplay adaptation is by Jay Basu &amp; Fede Alvarez and Steven Knight.
                         <p>DIRECTED BY Fede Alvarez </p>
                         <p>SCREENPLAY BY Jay Basu &amp; Fede Alvarez and Steven Knight </p>

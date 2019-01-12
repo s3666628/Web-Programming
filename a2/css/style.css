@@ -6,16 +6,32 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+/*    background-image: url("../../../media/blueback.jpg");*/
+    background-image: url("../../../media/Best-Website-Background-Images5.jpg");
+/*    background-blend-mode: lighten;*/
+    background-repeat: repeat;
+    background-position: top center;
+    background-attachment: fixed;
+
+
 }
+
+
 
 body {
     background-color: lightblue;
     font-family: 'Slabo 27px', serif;
     font-size: 18px;
     color: #8888ad;
+    width: 80%;
     padding: 10px;
-    background-color: #f6f6f6;   /*bbc grey*/
+    background-color: #f6f6f6;
+    /*bbc grey*/
     background-repeat: no-repeat;
+    margin: auto;
+
+
 }
 
 /*this section styles the main headings*/
@@ -37,9 +53,10 @@ h2 {
     color: rgb(255, 255, 255);
     border-radius: 5px;
     text-align: center;
-    background-image: linear-gradient(to right, #1596c0, lightblue); 
+    background-image: linear-gradient(to right, #1596c0, lightblue);
     padding: 15px;
 }
+
 /*tagline is slightly different / unique so wanted to style this diffently, hence the id*/
 #tagline {
     font-family: 'Cinzel Decorative', cursive;
@@ -74,12 +91,14 @@ h4 {
     color: lightblue;
 
 }
+
 /*styling of the text which is all inside paragraphs*/
 p {
     padding: 10px;
     text-align: justify;
 
 }
+
 /*styling the images - added drop shadow to make them more interesting*/
 
 img {
@@ -96,6 +115,7 @@ img {
     text-align: center;
 
 }
+
 /*Styling of the navigation*/
 
 #nav {
@@ -270,6 +290,7 @@ footer {
     color: white;
     opacity: 0.5;
     text-align: center;
+    border-radius: 5px;
 
 }
 
@@ -278,12 +299,14 @@ footer {
     font-style: italic;
 
 }
+
 /*styles the captions for the images*/
 figcaption {
     text-indent: 10px;
     font-style: italic;
     font-size: 16px;
 }
+
 /*styles the form that uses the POST method*/
 
 #standard_adult,
@@ -323,6 +346,11 @@ figcaption {
     padding-right: 10px;
 }
 
+fieldset {
+    border-radius: 5px;
+    padding: 15px;
+}
+
 /*
 .ib {
   background: repeating-linear-gradient(315deg, #666 0px, #666 20px, #CCC 20px, #CCC 40px);
@@ -338,140 +366,57 @@ figcaption {
 /*https://css-tricks.com/snippets/css/media-queries-for-standard-devices/*/
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
-}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {}
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-
-}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-
-}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
-}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-
-}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}
 
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {}
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
-}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-
-}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {
