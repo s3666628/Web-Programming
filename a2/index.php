@@ -454,7 +454,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             <label id="expiry" for="expiry date">Expiry Date</label>
                             <input type="month" name="cust[expiry]" />
                         </fieldset>
-
+                        <br />
                         <fieldset>
                             <label id="total" for="total">Total $</label>
                             <input type="text" name="total" maxlength="7" />
@@ -481,6 +481,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <footer>
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
+
             </script>
 
             <div>Philip Beeby (s3666628), Last modified: 06/01/2019
