@@ -39,7 +39,7 @@
 
 
     <main>
-        <article id='about'>
+        <article id='about' class="ib">
             <h2>About Us</h2>
             <p>The Lunardo Cinema was first opened in August 1922, when it was called 'The Portland' and was popular with locals and out-of-towners who would travel from far and wide to experience the magic of the motion picture in one of the finest examples of art deco architecture. At the time of its opening it was one of the only cinemas in Victoria able to show movies in <a href='https://en.wikipedia.org/wiki/70_mm_film' target="_blank">70 mm</a> - a higher resolution film gauge than standard 35mm film. Since that time, we have been a firm favourite with movie-buffs and cinema goers looking to see the magic of movies presented as the film makers intended.
                 <figure>
@@ -60,7 +60,7 @@
         <img src='../../media/website-under-construction.png' alt='Website Under Construction' />-->
         </article>
 
-        <article id='seats'>
+        <article id='seats' class="ib">
             <h2>Seats and Prices</h2>
             <p>
                 We now offer two types of seating, Standard and First-Class, both offer much improved levels of comformt and relaxation. </p>
@@ -152,7 +152,7 @@
 
 
         </article>
-        <article id='showing'>
+        <article id='showing' class="ib">
             <h2>Now Showing</h2>
 
             <!--            this code was sourced from W3 Schools
@@ -327,7 +327,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <button type="button" class="button" value="Input Button">Sun : 6PM</button>
 
         </article>
-        <article id='booking'>
+        <article id='booking' class="ib">
             <h2>Booking</h2>
             <hr class="line">
 
