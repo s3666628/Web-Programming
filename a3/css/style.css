@@ -1,1 +1,424 @@
 /* Insert your styles here */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+/*    background-image: url("../../../media/blueback.jpg");*/
+    background-image: url("../../../media/Best-Website-Background-Images5.jpg");
+/*    background-blend-mode: lighten;*/
+    background-repeat: repeat;
+    background-position: top center;
+    background-attachment: fixed;
+
+
+}
+
+
+
+body {
+    background-color: lightblue;
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+    color: #8888ad;
+    width: 80%;
+    padding: 10px;
+    background-color: #f6f6f6;
+    /*bbc grey*/
+    background-repeat: no-repeat;
+    margin: auto;
+
+
+}
+
+/*this section styles the main headings*/
+
+h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #000;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 75px;
+    text-shadow: 4px 4px lightgrey;
+    padding: 15px;
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-size: 55px;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-align: center;
+    background-image: linear-gradient(to right, #1596c0, lightblue);
+    padding: 15px;
+}
+
+/*tagline is slightly different / unique so wanted to style this diffently, hence the id*/
+#tagline {
+    font-family: 'Cinzel Decorative', cursive;
+    font-style: italic;
+    color: black;
+    text-align: center;
+    background-color: transparent;
+    font-size: 30px;
+    text-shadow: 1px 1px lightgrey;
+    background-image: none;
+    padding: 10px;
+    margin: black;
+}
+
+h3 {
+    font-family: "AvenirNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 35px;
+    border-radius: 5px;
+    text-decoration-color: burlywood border-radius: 5px;
+    padding: 10px;
+}
+
+h4 {
+    font-family: "AvenirNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration-color: burlywood border-radius: 5px;
+    padding: 10px;
+}
+
+.line {
+    color: lightblue;
+
+}
+
+/*styling of the text which is all inside paragraphs*/
+p {
+    padding: 10px;
+    text-align: justify;
+
+}
+
+/*styling the images - added drop shadow to make them more interesting*/
+
+img {
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+}
+
+/*decided to add the logo to the footer rather than at the top of the screen*/
+#logo {
+
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+/*Styling of the navigation*/
+
+#nav {
+    background-color: #1596c0;
+
+    height: 36px;
+    font-size: 25px;
+    font-weight: bold;
+    font: Tahoma;
+    border-radius: 5px;
+    position: sticky;
+    top: 0px;
+}
+
+#nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+
+#nav li {
+    display: inline;
+    padding: 15px;
+    vertical-align: middle;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #f9f9f6;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+
+
+}
+
+#nav a:hover {
+    background-color: #f9f9f6;
+    height: 36px;
+    color: #1596c0;
+    border-bottom-style: 1px solid black;
+}
+
+/*This was taken from W3 schools and modified slightly
+https://www.w3schools.com/csS/css3_buttons.asp*/
+.button {
+    background-color: #1596c0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #f9f9f6;
+    color: #1596c0;
+    border: 1px solid darkgrey;
+}
+
+ul.seat_list {
+    list-style-type: square;
+}
+
+/*
+this code was sourced from W3 Schools
+https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
+
+*/
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    /* changed as I want to have 4 columns*/
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flex-container {
+    display: flex;
+    align-content: center;
+    background-color: #1596c0;
+    border-radius: 5px;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 5px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.flex-container#trailer iframe {
+    display: block;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+
+}
+
+div.flex-container {
+    align-content: center;
+}
+
+div #trailer {
+    align-content: center;
+}
+
+div #trailer_detail {
+    align-content: center;
+}
+
+/*Styles the tables*/
+/*https://www.w3schools.com/Css/tryit.asp?filename=trycss_table_padding*/
+/*Attempted to round the corners of the table but could not get it working*/
+table,
+td,
+th {
+    border: 1px solid #ddd;
+    text-align: left;
+    background-color: antiquewhite;
+}
+
+th {
+    background-color: lightgray;
+    text-align: center;
+    font-weight: 700;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+th,
+td {
+    padding: 15px;
+    text-indent: 12px;
+}
+
+/*Styles the footer*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer*/
+footer {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1596c0;
+    color: white;
+    opacity: 0.5;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+#disclaimer {
+    text-align: center;
+    font-style: italic;
+
+}
+
+/*styles the captions for the images*/
+figcaption {
+    text-indent: 10px;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/*styles the form that uses the POST method*/
+
+#standard_adult,
+#standard_concession,
+#standard_child {
+    display: inline-block;
+    width: 162px;
+}
+
+#first_class_adult,
+#first_class_concession,
+#first_class_child {
+    display: inline-block;
+    width: 162px;
+}
+
+#name,
+#email,
+#mobile,
+#cc,
+#expiry {
+    display: inline-block;
+    width: 100px;
+}
+
+#total {
+    display: inline-block;
+    width: 100px;
+    text-indent: 16px;
+    padding-right: 10px;
+}
+
+#order {
+    display: inline-block;
+    width: 100px;
+    text-indent: 16px;
+    padding-right: 10px;
+}
+
+fieldset {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/*
+.ib {
+  background: repeating-linear-gradient(315deg, #666 0px, #666 20px, #CCC 20px, #CCC 40px);
+  display:inline-block;
+  width:45%;
+  height:400px;
+  min-width: 400px;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+*/
+/*the mobile configuration code was copied from the following site to try and get the site working correctly on iPhones*/
+/*https://css-tricks.com/snippets/css/media-queries-for-standard-devices/*/
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column width: 100%;
+}
