@@ -445,7 +445,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             <label id="email" for="email">Email</label>
                             <input type="email" name="cust[email]" maxlength="200" />
                             <br />
-                            <label id="mobile" for="mobile">mobile</label>
+                            <label id="mobile" for="mobile">Mobile</label>
                             <input type="tel" name="cust[mobile]" maxlength="20" />
                             <br />
                             <label id="cc" for="credit card">Credit Card</label>
