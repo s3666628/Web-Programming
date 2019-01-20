@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 2</title>
-
+    <title>Assignment 3</title>
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
@@ -13,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Slabo+27px|" rel="stylesheet">
+    <!--    points to where the java script is stored-->
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -291,7 +292,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div>
                     <h3>The Girl in the Spider's Web (G)</h3>
-<!--                    <h4>Movie Synopsis</h4>-->
+                    <!--                    <h4>Movie Synopsis</h4>-->
                     <p>A new Dragon Tattoo story comes to the screen starring Claire Foy ("The Crown") as Lisbeth Salander, the fierce, outcast vigilante defender from the acclaimed Millennium book series created by Stieg Larsson, in The Girl in the Spider's Web. A first-time adaptation of the recent global bestseller, the film is directed by Fede Alvarez, the director of 2016's breakout thriller Don't Breathe; the screenplay adaptation is by Jay Basu &amp; Fede Alvarez and Steven Knight.
                         <p>DIRECTED BY Fede Alvarez </p>
                         <p>SCREENPLAY BY Jay Basu &amp; Fede Alvarez and Steven Knight </p>
@@ -332,7 +333,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <hr class="line">
 
 
-            <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+            <form name="myForm" onsubmit="validateForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
                 <div>
                     <input type="hidden" name="movie[id]" value="ACT" />
                     <input type="hidden" name="movie[day]" value="MON" />
@@ -420,9 +421,11 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                                 <option value=10>10</option>
                             </select>
                             <br />
+
+
                             <label id="first_class_child" for="first class child">First Class Child</label>
-                            <select name="seats[FCC]">
-                                <option value="">Please Select</option>
+                            <select name="seats[FCC]" id="seats[FCC]" onchange="myFunction()">
+                                <option value="">Please Selxect</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
                                 <option value=3>3</option>
@@ -434,6 +437,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                                 <option value=9>9</option>
                                 <option value=10>10</option>
                             </select>
+                            <p id="demo12"></p>
                         </fieldset>
                         <br />
 
@@ -465,7 +469,18 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                     </fieldset>
 
+                    <p>Select a new car from the list.</p>
 
+                    <select id="mySelect" onchange="myFunction()">
+                        <option value="Audi">Audi
+                        <option value="BMW">BMW
+                        <option value="Mercedes">Mercedes
+                        <option value="Volvo">Volvo
+                    </select>
+
+                    <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+                    <p id="demo"></p>
 
                 </div>
 
@@ -478,11 +493,15 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
     </main>
 
-    <footer>
+    <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
 
             </script>
+            <button type="button" onclick="myFunction()">Try it</button>
+
+
+
 
             <div>Philip Beeby (s3666628), Last modified: 06/01/2019
                 <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
