@@ -16,7 +16,7 @@
     <script src="js/script.js"></script>
 </head>
 
-<body>
+<body onclick="testEventTarget(event)">
 
     <header>
 
@@ -321,7 +321,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
 
             <h3>Make a Booking:</h3>
-            <button type="button" class="button" value="Input Button">Wed : 9PM</button>
+            <button id=button1 onclick="testOnClick()"type="button" class="button" value="Input Button">Wed : 9PM</button>
             <button type="button" class="button" value="Input Button">Thu : 9PM</button>
             <button type="button" class="button" value="Input Button">Fri : 9PM</button>
             <button type="button" class="button" value="Input Button">Sat : 6PM</button>
@@ -333,7 +333,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <hr class="line">
 
 
-            <form name="myForm" onsubmit="validateForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post" target="_blank">
                 <div>
                     <input type="hidden" name="movie[id]" value="ACT" />
                     <input type="hidden" name="movie[day]" value="MON" />
@@ -343,8 +343,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         <h3>The Girl in the Spider's Web (G) - Saturday 6 PM</h3>
                         <fieldset>
                             <legend>Standard</legend>
-                            <label id="standard_adult" for="standard adult">Standard Adult</label>
-                            <select name="seats[STA]">
+                            <label id="standard_adult" for="standard adult" >Standard Adult</label>
+                            <select name="seats[STA]" id="seats[STA]" onchange="testOnChange()">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -359,7 +359,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             </select>
                             <br />
                             <label id="standard_concession" for="standard concession">Standard Concession</label>
-                            <select name="seats[STP]">
+                            <select name="seats[STP]" id=seats[STP]>
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -374,7 +374,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             </select>
                             <br />
                             <label id="standard_child" for="standard child">Standard Child</label>
-                            <select name="seats[STC]">
+                            <select name="seats[STC]" id="seats[STC]">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -392,7 +392,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         <fieldset>
                             <legend>First Class</legend>
                             <label id="first_class_adult" for="first class adult">First Class Adult</label>
-                            <select name="seats[FCA]">
+                            <select name="seats[FCA]" id="seats[FCA]">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -407,7 +407,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             </select>
                             <br />
                             <label id="first_class_concession" for="first class concession">First Class Concession</label>
-                            <select name="seats[FCP]">
+                            <select name="seats[FCP]" id="seats[FCP]" >
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -444,29 +444,26 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                         <fieldset>
                             <label id="name" for="name">Name</label>
-                            <input type="text" name="cust[name]" maxlength="20" />
+                            <input id="input_name"type="text" name="cust[name]" onblur="fieldValueOutput('input_name')" maxlength="20" />
                             <br />
                             <label id="email" for="email">Email</label>
-                            <input type="email" name="cust[email]" maxlength="200" />
+                            <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')"/>
                             <br />
                             <label id="mobile" for="mobile">Mobile</label>
-                            <input type="tel" name="cust[mobile]" maxlength="20" />
+                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile')"/>
                             <br />
                             <label id="cc" for="credit card">Credit Card</label>
-                            <input type="text" name="cust[card]" maxlength="19" />
+                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc')"/>
                             <br />
                             <label id="expiry" for="expiry date">Expiry Date</label>
-                            <input type="month" name="cust[expiry]" />
+                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')"/>
                         </fieldset>
                         <br />
                         <fieldset>
                             <label id="total" for="total">Total $</label>
-                            <input type="text" name="total" maxlength="7" />
-
+                            <input id="output_total" type="text" name="total" maxlength="7" onblur="fieldValueOutput('output_total')"/>
                             <button id="submit" type="submit" name="order" class="button" value="Submit">Order</button>
-
                         </fieldset>
-
                     </fieldset>
 
                     <p>Select a new car from the list.</p>
@@ -514,6 +511,12 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 
     </footer>
+    <hr class="line">
+    
+    <div>
+    <h4>Debug Console</h4>
+    <p id="debug_out"></p>
+    </div>
 
 </body>
 
