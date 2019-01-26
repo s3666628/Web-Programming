@@ -35,7 +35,7 @@
                     prev = articles[i -1].getBoundingClientRect().top;
                     next = articles[i].getBoundingClientRect().top;
                     log = prev + ' ' + next;
-                    if (prev <= 200 && next > 0) {
+                    if (prev <= -100 && next > 0) {
                         log += '<----------' +(i -1);
                         navlinks [i -1].classList.add("active");
                         
