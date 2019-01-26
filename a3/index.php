@@ -14,21 +14,39 @@
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Slabo+27px|" rel="stylesheet">
     <!--    points to where the java script is stored-->
     <script src="js/script.js"></script>
-    
+
     <script>window.onscroll = function(){
             console.clear();
             let navlinks = document.getElementsByTagName("nav")[0].children;
             console.log(navlinks);
-            let articles = document.getElementsByTagName("main")[0].childern;
-             console.log(articles);
+            let articles = document.getElementsByTagName("main")[0].children;
+            console.log(articles);
             last = articles[articles.length -1].getBoundingClientRect().top;
             
 
             if (last <=0){
-                cosonle.log('last');
+                console.log('last');
                 navlinks[navlinks.length -1].classList.add("active");
                 for (j = 0; j < navlinks.length -1; j++)
                     navlinks[j].classList.remove("active");
+            } else {
+                navlinks[articles.length -1].classList.remove("active");
+                for (i = 1; i < articles.length; i++) {
+                    prev = articles[i -1].getBoundingClientRect().top;
+                    next = articles[i].getBoundingClientRect().top;
+                    log = prev + ' ' + next;
+                    if (prev <= 200 && next > 0) {
+                        log += '<----------' +(i -1);
+                        navlinks [i -1].classList.add("active");
+                        
+                    } else {
+                        log +=' xxxx ';
+                        navlinks [i -1].classList.remove("active");
+                        
+                    }
+                    console.log(log);
+                }
+                
             }
         }
     
@@ -50,7 +68,7 @@
     </header>
 
 
-<!--
+    <!--
     <div id="nav">
         <ul>
             <li><a href="#about" >About Us</a></li>
@@ -61,15 +79,15 @@
     </div> 
     
 -->
-        <div id="nav">
+    <div id="nav">
         <nav>
             <a href="#about" class="navigation">About Us</a>
             <a href="#seats" class="navigation">Seats and Prices</a>
             <a href="#showing" class="navigation">Now Showing</a>
             <a href="#booking" class="navigation">Booking</a>
         </nav>
-        
-    </div> 
+
+    </div>
 
 
     <main>
@@ -93,7 +111,6 @@
             <!--commented out this 'under contstruction image          
         <img src='../../media/website-under-construction.png' alt='Website Under Construction' />-->
         </article>
-
         <article id='seats' class="ib">
             <h2>Seats and Prices</h2>
             <p>
@@ -354,7 +371,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
 
             <h3>Make a Booking:</h3>
-            <button id=button1 onclick="testOnClick()"type="button" class="button" value="Input Button">Wed : 9PM</button>
+            <button id=button1 onclick="testOnClick()" type="button" class="button" value="Input Button">Wed : 9PM</button>
             <button type="button" class="button" value="Input Button">Thu : 9PM</button>
             <button type="button" class="button" value="Input Button">Fri : 9PM</button>
             <button type="button" class="button" value="Input Button">Sat : 6PM</button>
@@ -376,7 +393,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         <h3>The Girl in the Spider's Web (G) - Saturday 6 PM</h3>
                         <fieldset>
                             <legend>Standard</legend>
-                            <label id="standard_adult" for="standard adult" >Standard Adult</label>
+                            <label id="standard_adult" for="standard adult">Standard Adult</label>
                             <select name="seats[STA]" id="seats[STA]" onchange="testOnChange()">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
@@ -440,7 +457,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             </select>
                             <br />
                             <label id="first_class_concession" for="first class concession">First Class Concession</label>
-                            <select name="seats[FCP]" id="seats[FCP]" >
+                            <select name="seats[FCP]" id="seats[FCP]">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -477,24 +494,24 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                         <fieldset>
                             <label id="name" for="name">Name</label>
-                            <input id="input_name"type="text" name="cust[name]" onblur="fieldValueOutput('input_name')" maxlength="20" />
+                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name')" maxlength="20" />
                             <br />
                             <label id="email" for="email">Email</label>
-                            <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')"/>
+                            <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')" />
                             <br />
                             <label id="mobile" for="mobile">Mobile</label>
-                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile')"/>
+                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile')" />
                             <br />
                             <label id="cc" for="credit card">Credit Card</label>
-                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc')"/>
+                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc')" />
                             <br />
                             <label id="expiry" for="expiry date">Expiry Date</label>
-                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')"/>
+                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')" />
                         </fieldset>
                         <br />
                         <fieldset>
                             <label id="total" for="total">Total $</label>
-                            <input id="output_total" type="text" name="total" maxlength="7" onblur="fieldValueOutput('output_total')"/>
+                            <input id="output_total" type="text" name="total" maxlength="7" onblur="fieldValueOutput('output_total')" />
                             <button id="submit" type="submit" name="order" class="button" value="Submit">Order</button>
                         </fieldset>
                     </fieldset>
@@ -523,6 +540,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
     </main>
 
+
     <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
@@ -545,10 +563,10 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
     </footer>
     <hr class="line">
-    
+
     <div>
-    <h4>Debug Console</h4>
-    <p id="debug_out"></p>
+        <h4>Debug Console</h4>
+        <p id="debug_out"></p>
     </div>
 
 </body>

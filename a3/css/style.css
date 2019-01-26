@@ -183,6 +183,21 @@ img {
     border-bottom-style: 1px solid black;
 }
 
+.active{ 
+    background-color: #f9f9f6; 
+    height: 36px;
+    color: #1596c0  !important;
+    border-bottom-style: 1px solid black;
+}
+/*
+.active{
+    background-color: #1596c0; 
+    height: 36px;
+    color: #f9f9f6;
+    border-bottom-style: 1px solid black;
+}
+*/
+
 /*This was taken from W3 schools and modified slightly
 https://www.w3schools.com/csS/css3_buttons.asp*/
 .button {
