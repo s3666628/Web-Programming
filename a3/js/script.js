@@ -8,8 +8,10 @@ function logForm() {
     //function to capture the form information when user clicks on the 'order' button
     console.log("logForm Function has been called");
     var formInfomation = document.forms["myForm"];
-    console.log("Form Submission Details");
+    console.log("Form Submission Details++");
     console.log(formInfomation);
+    var formInfomation = String(formInfomation);
+    document.getElementById("debug_out").innerHTML = formInfomation;
 
 }
 

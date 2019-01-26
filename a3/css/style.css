@@ -130,6 +130,7 @@ img {
     top: 0px;
 }
 
+/*
 #nav ul {
     padding: 0;
     margin: 0;
@@ -143,6 +144,18 @@ img {
     padding: 15px;
     vertical-align: middle;
 }
+*/
+
+/*added this as I changed the naigation HTML to <nav> rather than <ul> to match Trevor's example for JS*/
+
+
+
+.navigation {
+    display: inline;
+    padding: 15px;
+    vertical-align: middle;
+
+}
 
 #nav a {
     text-decoration: none;
@@ -154,6 +167,13 @@ img {
     vertical-align: middle;
 
 
+}
+
+.navigation {
+    padding: 10;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
 }
 
 #nav a:hover {

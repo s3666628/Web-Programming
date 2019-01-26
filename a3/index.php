@@ -14,6 +14,27 @@
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Slabo+27px|" rel="stylesheet">
     <!--    points to where the java script is stored-->
     <script src="js/script.js"></script>
+    
+    <script>window.onscroll = function(){
+            console.clear();
+            let navlinks = document.getElementsByTagName("nav")[0].children;
+            console.log(navlinks);
+            let articles = document.getElementsByTagName("main")[0].childern;
+             console.log(articles);
+            last = articles[articles.length -1].getBoundingClientRect().top;
+            
+
+            if (last <=0){
+                cosonle.log('last');
+                navlinks[navlinks.length -1].classList.add("active");
+                for (j = 0; j < navlinks.length -1; j++)
+                    navlinks[j].classList.remove("active");
+            }
+        }
+    
+    
+    
+    </script>
 </head>
 
 <body onclick="testEventTarget(event)">
@@ -29,14 +50,26 @@
     </header>
 
 
+<!--
     <div id="nav">
         <ul>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="#about" >About Us</a></li>
             <li><a href="#seats">Seats and Prices</a></li>
             <li><a href="#showing">Now Showing</a></li>
             <li><a href="#booking">Booking</a></li>
         </ul>
-    </div>
+    </div> 
+    
+-->
+        <div id="nav">
+        <nav>
+            <a href="#about" class="navigation">About Us</a>
+            <a href="#seats" class="navigation">Seats and Prices</a>
+            <a href="#showing" class="navigation">Now Showing</a>
+            <a href="#booking" class="navigation">Booking</a>
+        </nav>
+        
+    </div> 
 
 
     <main>
