@@ -149,13 +149,13 @@ require_once("tools.php");
 
             <p>The Cinema offers discounted pricing weekday afternoons (ie weekday matinée sessions) and all day on Mondays and Wednesdays. </p>
 
-
-
-
-            <?php
+<!--get the table from PHP function rather than having HMTL in the page-->
+<?php
 movieTable();
 ?>
 
+
+<!--
             <table>
                 <tr>
                     <th>Seat Type</th>
@@ -206,6 +206,7 @@ movieTable();
 
                 </tr>
             </table>
+-->
 
 
 
@@ -220,7 +221,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <div class="row">
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img src="../../media/The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
+                    <img class=poster onclick="setMovieID('ACT')" src="../../media/The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
 
                     <table>
                         <tr>
@@ -250,7 +251,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img src="../../media/A_Star_is_Born.png" width="330" height="489" alt="A_Star_is_Born.png" />
+                    <img class=poster onclick="setMovieID('RMC')" src="../../media/A_Star_is_Born.png" width="330" height="489" alt="A_Star_is_Born.png" />
 
                     <table>
                         <tr>
@@ -278,7 +279,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img src="../../media/Ralph_Breaks_the_Internet_(2018_film_poster).png" width="330" height="489" alt="Ralph_Breaks_the_Internet" />
+                    <img class=poster onclick="setMovieID('ANM')" src="../../media/Ralph_Breaks_the_Internet_(2018_film_poster).png" width="330" height="489" alt="Ralph_Breaks_the_Internet" />
 
                     <table>
                         <tr>
@@ -314,7 +315,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img src="../../media/Boy_Erased_(2018_poster).png" width="330" height="489" alt="Boy_Erased" />
+                    <img class=poster onclick="setMovieID('AHF')" src="../../media/Boy_Erased_(2018_poster).png" width="330" height="489" alt="Boy_Erased" />
 
                     <table>
                         <tr>
@@ -397,7 +398,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <input id="hidden_mov_id" type="hidden" name="movie[id]" value="ACT" />
                     <input id="hidden_day" type="hidden" name="movie[day]" value="MON" />
                     <input id="hidden_time" type="hidden" name="movie[hour]" value=12>
--->
+--> 
+                    <script>getMovieTitle()</script>
 
                     <input id="hidden_mov_id" type="hidden" name="movie[id]" />
                     <input id="hidden_day" type="hidden" name="movie[day]" />
@@ -500,7 +502,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                                 <option value=9>9</option>
                                 <option value=10>10</option>
                             </select>
-                            <p id="demo12"></p>
+<!--                            <p id="demo12"></p>-->
                         </fieldset>
                         <br />
 
@@ -576,6 +578,10 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 
     </footer>
+    
+<?php
+print_footer();
+?>
     <hr class="line">
 
     <div>

@@ -298,8 +298,9 @@ th {
     font-weight: 700;
 }
 
-td:hover{
+.poster:hover{
     background-color: azure;
+    box-shadow: 0 24px 28px 0 darkblue;
     
 }
 
