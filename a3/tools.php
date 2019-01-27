@@ -17,6 +17,7 @@ function printMyCode() {
      echo '<li>'.rtrim(htmlentities($line)).'</li>';
   echo '</ol></pre>';
 }
-
-
+function movieTable() {
+    echo '<p>'test test test'</p>';
+}
 ?>

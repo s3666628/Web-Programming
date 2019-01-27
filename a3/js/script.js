@@ -10,15 +10,21 @@ function logForm() {
     var formInfomation = document.forms["myForm"];
     console.log("Form Submission Details");
     console.log(formInfomation);
-//    var formInfomation = String(formInfomation);
+    //    var formInfomation = String(formInfomation);
     document.getElementById("debug_out").innerHTML = formInfomation;
 
 }
 
-function testOnClick() {
+function testOnClick(move_id, day, time) {
     //function to test alerting on the screen
-    window.alert("test");
-    console.log("test")
+
+    window.alert("movie_id: " + move_id + " day: " + day + " time: " + time);
+    console.log("movie_id: " + move_id + " day: " + day + " time: " + time);
+ 
+    document.getElementById("hidden_mov_id").value = move_id;
+    document.getElementById("hidden_day").value = day;
+    document.getElementById("hidden_time").value = time;
+    console.log("the values for hidden fields have been set: "+"movie_id: " + move_id + " day: " + day + " time: " + time);
     //    window.alert("enter alerting window function here");
 
 
@@ -37,9 +43,9 @@ function testOnChange() {
 function fieldValueOutput(fieldId) {
     //function to get the id of the field and the value entered
     var elementIdValue = document.getElementById(fieldId).value;
-//    window.alert(elementIdValue);
-    console.log("Field element id is: "+fieldId+" and Element value is: " +elementIdValue);
-    document.getElementById("debug_out").innerHTML = "Field element id is: "+fieldId+" and Element value is: " +elementIdValue;
+    //    window.alert(elementIdValue);
+    console.log("Field element id is: " + fieldId + " and Element value is: " + elementIdValue);
+    document.getElementById("debug_out").innerHTML = "Field element id is: " + fieldId + " and Element value is: " + elementIdValue;
     //    window.alert("enter alerting window function here");
 
 

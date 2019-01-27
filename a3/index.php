@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang='en'>
+<?php
+require_once("tools.php");
+?>
 
 <head>
     <meta charset="utf-8">
@@ -149,6 +152,10 @@
 
 
 
+            <?php
+movieTable();
+?>
+
             <table>
                 <tr>
                     <th>Seat Type</th>
@@ -251,17 +258,17 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                         </tr>
                         <tr>
-                            <td>Monday - 6 PM</td>
+                            <td onclick="testOnClick('ACT', 'MON', '6')">Monday - 6 PM</td>
                         </tr>
                         <tr>
-                            <td>Tuesday - 6 PM</td>
+                            <td onclick="testOnClick('ACT', 'TUE', '6')">Tuesday - 6 PM</td>
                         </tr>
 
                         <tr>
-                            <td>Saturday - 3 PM</td>
+                            <td onclick="testOnClick('ACT', 'SAT', '3')">Saturday - 3 PM</td>
                         </tr>
                         <tr>
-                            <td>Sunday - 3 PM</td>
+                            <td onclick="testOnClick('ACT', 'SUN', '3')">Sunday - 3 PM</td>
                         </tr>
 
                     </table>
@@ -383,12 +390,18 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <hr class="line">
 
 
-            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post" target="_blank">
+            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" target="_blank">
                 <div>
-                    <input type="hidden" name="movie[id]" value="ACT" />
-                    <input type="hidden" name="movie[day]" value="MON" />
-                    <!--                    not sure this (time) is an integer-->
-                    <input type="hidden" name="movie[hour]" value=12>
+
+                    <!--
+                    <input id="hidden_mov_id" type="hidden" name="movie[id]" value="ACT" />
+                    <input id="hidden_day" type="hidden" name="movie[day]" value="MON" />
+                    <input id="hidden_time" type="hidden" name="movie[hour]" value=12>
+-->
+
+                    <input id="hidden_mov_id" type="hidden" name="movie[id]" />
+                    <input id="hidden_day" type="hidden" name="movie[day]" />
+                    <input id="hidden_time" type="hidden" name="movie[hour]" />
                     <fieldset>
                         <h3>The Girl in the Spider's Web (G) - Saturday 6 PM</h3>
                         <fieldset>
@@ -516,6 +529,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         </fieldset>
                     </fieldset>
 
+                    <!--
                     <p>Select a new car from the list.</p>
 
                     <select id="mySelect" onchange="myFunction()">
@@ -528,6 +542,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
 
                     <p id="demo"></p>
+-->
 
                 </div>
 
@@ -544,9 +559,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
-
             </script>
-            <button type="button" onclick="myFunction()">Try it</button>
+            <!--            <button type="button" onclick="myFunction()">Try it</button>-->
 
 
 
@@ -567,6 +581,17 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <div>
         <h4>Debug Console</h4>
         <p id="debug_out"></p>
+        <?php 
+        echo "My first PHP script!";
+        preShow($_POST); // ie echo a string
+        preShow($_SESSION);
+
+        $aaarg = preShow($my_bad_array, true); // ie return as a string
+        echo "Why is \n $aaarg \n not working?";
+        printMyCode();
+
+        ?>
+
     </div>
 
 </body>
