@@ -58,7 +58,7 @@ require_once("tools.php");
     </script>
 </head>
 
-<body onclick="testEventTarget(event)">
+<body onclick="testEventTarget(event)" ; onload="hideSections()">
 
     <header>
 
@@ -94,7 +94,7 @@ require_once("tools.php");
 
 
     <main>
-        <article id='about' class="ib">
+        <article id="about" class="ib">
             <h2>About Us</h2>
             <p>The Lunardo Cinema was first opened in August 1922, when it was called 'The Portland' and was popular with locals and out-of-towners who would travel from far and wide to experience the magic of the motion picture in one of the finest examples of art deco architecture. At the time of its opening it was one of the only cinemas in Victoria able to show movies in <a href='https://en.wikipedia.org/wiki/70_mm_film' target="_blank">70 mm</a> - a higher resolution film gauge than standard 35mm film. Since that time, we have been a firm favourite with movie-buffs and cinema goers looking to see the magic of movies presented as the film makers intended.
                 <figure>
@@ -114,7 +114,7 @@ require_once("tools.php");
             <!--commented out this 'under contstruction image          
         <img src='../../media/website-under-construction.png' alt='Website Under Construction' />-->
         </article>
-        <article id='seats' class="ib">
+        <article id="seats" class="ib">
             <h2>Seats and Prices</h2>
             <p>
                 We now offer two types of seating, Standard and First-Class, both offer much improved levels of comformt and relaxation. </p>
@@ -211,7 +211,7 @@ movieTable();
 
 
         </article>
-        <article id='showing' class="ib">
+        <article id="showing" class="ib">
             <h2>Now Showing</h2>
 
             <!--            this code was sourced from W3 Schools
@@ -349,7 +349,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <div class="flex-container">
 
 
-                <div>
+                <div id="synop_1">
                     <h3>The Girl in the Spider's Web (G)</h3>
                     <!--                    <h4>Movie Synopsis</h4>-->
                     <p>A new Dragon Tattoo story comes to the screen starring Claire Foy ("The Crown") as Lisbeth Salander, the fierce, outcast vigilante defender from the acclaimed Millennium book series created by Stieg Larsson, in The Girl in the Spider's Web. A first-time adaptation of the recent global bestseller, the film is directed by Fede Alvarez, the director of 2016's breakout thriller Don't Breathe; the screenplay adaptation is by Jay Basu &amp; Fede Alvarez and Steven Knight.
@@ -363,7 +363,32 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         <p>Rated - MA (Mature Audiences)</p>
                 </div>
 
-                <div id="trailer_detail">
+                <div id="trailer_detail_1">
+
+                    <!-- the iframe information was taken from YouTube -->
+                    <!--                    <span id="trailer_detail">-->
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKMSP9OKspQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!--                        </span>-->
+
+
+                </div>
+
+                <div id="synop_2">
+                    <h3>Boy Erased(G)</h3>
+                    <!--                    <h4>Movie Synopsis</h4>-->
+                    <p>A new Dragon Tattoo story comes to the screen starring Claire Foy ("The Crown") as Lisbeth Salander, the fierce, outcast vigilante defender from the acclaimed Millennium book series created by Stieg Larsson, in The Girl in the Spider's Web. A first-time adaptation of the recent global bestseller, the film is directed by Fede Alvarez, the director of 2016's breakout thriller Don't Breathe; the screenplay adaptation is by Jay Basu &amp; Fede Alvarez and Steven Knight.
+                        <p>DIRECTED BY Fede Alvarez </p>
+                        <p>SCREENPLAY BY Jay Basu &amp; Fede Alvarez and Steven Knight </p>
+                        <p>PRODUCED BY Scott Rudin, Eli Bush, Ole Søndberg, Søren Stærmose, Berna Levin, Amy Pascal, Elizabeth Cantillon
+                            EXECUTIVE PRODUCERS Arnon Milchan, Robert J. Dohrmann, David Fincher, Line Winther Skyum Funch, Johannes Jensen, Anni Faurbye Fernandez</p>
+                        <p>CAST
+                            Claire Foy, Sverrir Gudnason, Lakeith Stanfield, Sylvia Hoeks, Stephen Merchant </p>
+                        <p>Running Time - 155 mins</p>
+                        <p>Rated - MA (Mature Audiences)</p>
+                </div>
+
+                <div id="trailer_detail_2">
 
                     <!-- the iframe information was taken from YouTube -->
                     <!--                    <span id="trailer_detail">-->
@@ -378,15 +403,30 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
             </div>
 
+            <div id="book_buttons_1">
+                <h3>Make a Booking:</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('WED', '9')" type="button" class="button" value="Input Button">Wed : 9PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('THU', '9')" type="button" class="button" value="Input Button">Thu : 9PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9')" type="button" class="button" value="Input Button">Fri : 9PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6')" type="button" class="button" value="Input Button">Sat : 6PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6')" type="button" class="button" value="Input Button">Sun : 6PM</button>
+            </div>
 
-            <h3>Make a Booking:</h3>
-            <button id="booking_button1" onclick="upateMovieDayTime('WED', '9')" type="button" class="button" value="Input Button">Wed : 9PM</button>
-            <button id="booking_button2" onclick="upateMovieDayTime('THU', '9')" type="button" class="button" value="Input Button">Thu : 9PM</button>
-            <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9')" type="button" class="button" value="Input Button">Fri : 9PM</button>
-            <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6')" type="button" class="button" value="Input Button">Sat : 6PM</button>
-            <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6')" type="button" class="button" value="Input Button">Sun : 6PM</button>
+            <div id="book_buttons_2">
+                <h3>Make a Booking:</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('WED', '1111')" type="button" class="button" value="Input Button">Wed : 9PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('THU', '9')" type="button" class="button" value="Input Button">Thu : 9PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9')" type="button" class="button" value="Input Button">Fri : 9PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6')" type="button" class="button" value="Input Button">Sat : 6PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6')" type="button" class="button" value="Input Button">Sun : 6PM</button>
+            </div>
+
+
+
+
+
         </article>
-        <article id='booking' class="ib">
+        <article id="booking" class="ib">
             <h2>Booking</h2>
             <hr class="line">
 
@@ -561,6 +601,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
+
             </script>
             <!--            <button type="button" onclick="myFunction()">Try it</button>-->
 
