@@ -149,13 +149,13 @@ require_once("tools.php");
 
             <p>The Cinema offers discounted pricing weekday afternoons (ie weekday matinée sessions) and all day on Mondays and Wednesdays. </p>
 
-<!--get the table from PHP function rather than having HMTL in the page-->
-<?php
+            <!--get the table from PHP function rather than having HMTL in the page-->
+            <?php
 movieTable();
 ?>
 
 
-<!--
+            <!--
             <table>
                 <tr>
                     <th>Seat Type</th>
@@ -221,7 +221,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <div class="row">
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img class=poster onclick="setMovieID('ACT')" src="../../media/The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
+                    <img class=poster onclick="hideSections(); setMovieID('ACT')" src="../../media/The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
 
                     <table>
                         <tr>
@@ -259,17 +259,17 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                         </tr>
                         <tr>
-                            <td onclick="testOnClick('ACT', 'MON', '6')">Monday - 6 PM</td>
+                            <td>Monday - 6 PM</td>
                         </tr>
                         <tr>
-                            <td onclick="testOnClick('ACT', 'TUE', '6')">Tuesday - 6 PM</td>
+                            <td>Tuesday - 6 PM</td>
                         </tr>
 
                         <tr>
-                            <td onclick="testOnClick('ACT', 'SAT', '3')">Saturday - 3 PM</td>
+                            <td>Saturday - 3 PM</td>
                         </tr>
                         <tr>
-                            <td onclick="testOnClick('ACT', 'SUN', '3')">Sunday - 3 PM</td>
+                            <td>Sunday - 3 PM</td>
                         </tr>
 
                     </table>
@@ -348,6 +348,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
             <div class="flex-container">
 
+
                 <div>
                     <h3>The Girl in the Spider's Web (G)</h3>
                     <!--                    <h4>Movie Synopsis</h4>-->
@@ -379,12 +380,11 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
 
             <h3>Make a Booking:</h3>
-            <button id=button1 onclick="testOnClick()" type="button" class="button" value="Input Button">Wed : 9PM</button>
-            <button type="button" class="button" value="Input Button">Thu : 9PM</button>
-            <button type="button" class="button" value="Input Button">Fri : 9PM</button>
-            <button type="button" class="button" value="Input Button">Sat : 6PM</button>
-            <button type="button" class="button" value="Input Button">Sun : 6PM</button>
-
+            <button id="booking_button1" onclick="upateMovieDayTime('WED', '9')" type="button" class="button" value="Input Button">Wed : 9PM</button>
+            <button id="booking_button2" onclick="upateMovieDayTime('THU', '9')" type="button" class="button" value="Input Button">Thu : 9PM</button>
+            <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9')" type="button" class="button" value="Input Button">Fri : 9PM</button>
+            <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6')" type="button" class="button" value="Input Button">Sat : 6PM</button>
+            <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6')" type="button" class="button" value="Input Button">Sun : 6PM</button>
         </article>
         <article id='booking' class="ib">
             <h2>Booking</h2>
@@ -398,7 +398,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <input id="hidden_mov_id" type="hidden" name="movie[id]" value="ACT" />
                     <input id="hidden_day" type="hidden" name="movie[day]" value="MON" />
                     <input id="hidden_time" type="hidden" name="movie[hour]" value=12>
---> 
+-->
                     <script>getMovieTitle()</script>
 
                     <input id="hidden_mov_id" type="hidden" name="movie[id]" />
@@ -502,7 +502,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                                 <option value=9>9</option>
                                 <option value=10>10</option>
                             </select>
-<!--                            <p id="demo12"></p>-->
+                            <!--                            <p id="demo12"></p>-->
                         </fieldset>
                         <br />
 
@@ -578,8 +578,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 
     </footer>
-    
-<?php
+
+    <?php
 print_footer();
 ?>
     <hr class="line">
