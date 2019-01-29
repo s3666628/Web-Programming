@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html lang='en'>
 <?php
 require_once("tools.php");
 ?>
+<!DOCTYPE html>
+<html lang='en'>
 
 <head>
     <meta charset="utf-8">
@@ -57,8 +57,9 @@ require_once("tools.php");
     
     </script>
 </head>
+<!--; onload="hideSections()"-->
 
-<body onclick="testEventTarget(event)" ; onload="hideSections()">
+<body onclick="testEventTarget(event)">
 
     <header>
 
@@ -350,7 +351,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
 
                 <div id="synop_1">
-                    <h3>The Girl in the Spider's Web (G)</h3>
+                    <h3>The Girl in the Spider's Web (MA)</h3>
                     <!--                    <h4>Movie Synopsis</h4>-->
                     <p>A new Dragon Tattoo story comes to the screen starring Claire Foy ("The Crown") as Lisbeth Salander, the fierce, outcast vigilante defender from the acclaimed Millennium book series created by Stieg Larsson, in The Girl in the Spider's Web. A first-time adaptation of the recent global bestseller, the film is directed by Fede Alvarez, the director of 2016's breakout thriller Don't Breathe; the screenplay adaptation is by Jay Basu &amp; Fede Alvarez and Steven Knight.
                         <p>DIRECTED BY Fede Alvarez </p>
@@ -375,17 +376,16 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                 </div>
 
                 <div id="synop_2">
-                    <h3>Boy Erased(G)</h3>
+                    <h3>Boy Erased(MA 15)</h3>
                     <!--                    <h4>Movie Synopsis</h4>-->
-                    <p>A new Dragon Tattoo story comes to the screen starring Claire Foy ("The Crown") as Lisbeth Salander, the fierce, outcast vigilante defender from the acclaimed Millennium book series created by Stieg Larsson, in The Girl in the Spider's Web. A first-time adaptation of the recent global bestseller, the film is directed by Fede Alvarez, the director of 2016's breakout thriller Don't Breathe; the screenplay adaptation is by Jay Basu &amp; Fede Alvarez and Steven Knight.
-                        <p>DIRECTED BY Fede Alvarez </p>
-                        <p>SCREENPLAY BY Jay Basu &amp; Fede Alvarez and Steven Knight </p>
-                        <p>PRODUCED BY Scott Rudin, Eli Bush, Ole Søndberg, Søren Stærmose, Berna Levin, Amy Pascal, Elizabeth Cantillon
-                            EXECUTIVE PRODUCERS Arnon Milchan, Robert J. Dohrmann, David Fincher, Line Winther Skyum Funch, Johannes Jensen, Anni Faurbye Fernandez</p>
-                        <p>CAST
-                            Claire Foy, Sverrir Gudnason, Lakeith Stanfield, Sylvia Hoeks, Stephen Merchant </p>
-                        <p>Running Time - 155 mins</p>
-                        <p>Rated - MA (Mature Audiences)</p>
+                    <p>
+                        <p>Boy Erased tells the courageous story of Jared Eamons (<a href="https://www.imdb.com/name/nm2348627/" target="_blank">Hedges</a>), the son of a Baptist pastor in a small American town, who must overcome the fallout of being outed to his parents (<a href="https://www.imdb.com/name/nm0000173/" target="_blank">Kidman</a> and <a href="https://www.imdb.com/name/nm0000128/" target="_blank">Crowe</a>). His parents struggle with reconciling their love for their son with their beliefs. Fearing a loss of family, friends, and community, Jared is pressured into attending a conversion therapy program. While there, Jared comes into conflict with its leader (<a href="https://www.imdb.com/name/nm0249291/" target="_blank">Edgerton</a>) and begins his journey to finding his own voice and accepting his true self.&nbsp;</p>
+                        <p>Writer/Director/Producer - Joel Edgerton</p>
+                        <p>PRODUCER - Kerry Kohansky-Roberts </p>
+                        <p>PRODUCER - Steve Golin</p>
+                        <p>CAST - Lucas Hedges, Nicole Kidman, Russell Crowe</p>
+                        <p>Running Time - 114 mins</p>
+                        <p>Rated - MA 15+ (A scene of strong sexual violence)</p>
                 </div>
 
                 <div id="trailer_detail_2">
@@ -393,7 +393,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <!-- the iframe information was taken from YouTube -->
                     <!--                    <span id="trailer_detail">-->
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKMSP9OKspQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-B71eyB_Onw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <!--                        </span>-->
 
 
@@ -430,8 +430,11 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <h2>Booking</h2>
             <hr class="line">
 
+            <!--this was for testing purposes-->
+            <!--            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" target="_blank"> -->
+            <!--this is for making php information appear in the logging section of the page as per Trevor's guidance-->
+            <form name="myForm" onsubmit="logForm()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">
 
-            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" target="_blank">
                 <div>
 
                     <!--
@@ -529,7 +532,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
 
                             <label id="first_class_child" for="first class child">First Class Child</label>
-                            <select name="seats[FCC]" id="seats[FCC]" onchange="myFunction()">
+                            <select name="seats[FCC]" id="seats[FCC]">
+                                <!--                                onchange="myFunction()"-->
                                 <option value="">Please Selxect</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -601,7 +605,6 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
-
             </script>
             <!--            <button type="button" onclick="myFunction()">Try it</button>-->
 

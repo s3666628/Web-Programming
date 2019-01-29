@@ -23,12 +23,12 @@ function logForm() {
 
 }
 
-function getMovieTitle() {
-    for (i = 0; i < movies.length - 1; i++) {
-        console.log(movies[i]);
-    }
-
-}
+//function getMovieTitle() {
+//    for (i = 0; i < movies.length - 1; i++) {
+//        console.log(movies[i]);
+//    }
+//
+//}
 
 
 function setMovieID(movie_id) {
@@ -74,43 +74,43 @@ function upateMovieDayTime(day, time) {
 //
 //}
 
-function hideSections() {
-
-    if (movie_selected == 'ABC') {
-
-        console.log("movie currently selected is: " + movie_selected);
-        var x = document.getElementById("booking");
-        var y = document.getElementById("synop_1");
-        var z = document.getElementById("trailer_detail_1");
-        var a = document.getElementById("book_buttons_1");
-        console.log("found booking " + x);
-        console.log("found synop_1 " + y);
-        console.log("found trailer_detail_1 " + z);
-        console.log("found book_buttons_1 " + a);
-        //        booking_section.style.display = "none";
-        x.style.display = "none";
-        y.style.display = "none";
-        z.style.display = "none";
-        a.style.display = "none";
-    } else if (movie_selected == 'AHF') {
-
-        console.log("movie currently selected is: " + movie_selected);
-        var x = document.getElementById("booking");
-        var y = document.getElementById("synop_2");
-        var z = document.getElementById("trailer_detail_2");
-        var a = document.getElementById("book_buttons_2");
-        console.log("found booking " + x);
-        console.log("found synop_2 " + y);
-        console.log("found trailer_detail_2 " + z);
-        console.log("found book_buttons_2 " + a);
-        //        booking_section.style.display = "none";
-        x.style.display = "none";
-        y.style.display = "none";
-        z.style.display = "none";
-        a.style.display = "none";
-    }
-
-}
+//function hideSections() {
+//
+//    if (movie_selected == 'ABC') {
+//
+//        console.log("movie currently selected is: " + movie_selected);
+//        var x = document.getElementById("booking");
+//        var y = document.getElementById("synop_1");
+//        var z = document.getElementById("trailer_detail_1");
+//        var a = document.getElementById("book_buttons_1");
+//        console.log("found booking " + x);
+//        console.log("found synop_1 " + y);
+//        console.log("found trailer_detail_1 " + z);
+//        console.log("found book_buttons_1 " + a);
+//        //        booking_section.style.display = "none";
+//        x.style.display = "none";
+//        y.style.display = "none";
+//        z.style.display = "none";
+//        a.style.display = "none";
+//    } else if (movie_selected == 'AHF') {
+//
+//        console.log("movie currently selected is: " + movie_selected);
+//        var x = document.getElementById("booking");
+//        var y = document.getElementById("synop_2");
+//        var z = document.getElementById("trailer_detail_2");
+//        var a = document.getElementById("book_buttons_2");
+//        console.log("found booking " + x);
+//        console.log("found synop_2 " + y);
+//        console.log("found trailer_detail_2 " + z);
+//        console.log("found book_buttons_2 " + a);
+//        //        booking_section.style.display = "none";
+//        x.style.display = "none";
+//        y.style.display = "none";
+//        z.style.display = "none";
+//        a.style.display = "none";
+//    }
+//
+//}
 
 //function setToHide(id_val){
 //    var x = document.getElementById(id_val);

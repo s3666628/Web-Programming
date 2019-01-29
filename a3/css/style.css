@@ -130,6 +130,35 @@ img {
     top: 0px;
 }
 
+/*turn of sections of HTML by defult and then use JS to turn them on as needed*/
+
+/*
+#booking{
+    display: none;
+}
+*/
+
+#synop_1, #book_buttons_1, #trailer_detail_1{
+    display: none;
+}
+
+/*
+#synop_2, #book_buttons_2, #trailer_detail_2{
+    display: none;
+}
+*/
+
+
+/*
+#trailer_detail_1{
+    display: none;
+}
+
+#book_buttons_1{
+    display: none;
+}
+*/
+
 /*
 #nav ul {
     padding: 0;
