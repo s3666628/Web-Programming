@@ -252,7 +252,7 @@ function testOnChange() {
     var total = numStandardAdultSeats + numStandardConcessionSeats + numStandardChildSeats + numFirstAdultSeats + numFirstConcessionSeats + numFirstChildSeats;
 
     //    var totalOut = document.getElementsByClassName("output_total");
-    document.getElementById("total").innerHTML = total;
+    document.getElementById("output_total").value = total;
     //    console.log(typeof (numStandardSeats))
 
     //    var elementId = elementId *12; 

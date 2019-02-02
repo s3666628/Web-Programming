@@ -598,7 +598,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
 
                             <label id="first_class_child" for="first class child" >First Class Child</label>
-                            <select name="seats[FCC]" id="seats[FCC]" onchange="testOnChange()">
+                            <select name="seats[FCC]" id="seats[FCC]">
                                 <!--                                onchange="myFunction()"-->
                                 <option value="">Please Selxect</option>
                                 <option value=1>1</option>
