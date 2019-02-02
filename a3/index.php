@@ -222,7 +222,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             <div class="row">
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img class=poster onclick="hideSections(); setMovieID('ACT')" src="../../media/The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
+                    <img class=poster onclick="showSections('ACT')" src="../../media/The_Girl_in_the_Spider's_Web_poster.png" width="330" height="489" alt="The_Girl_in_the_Spider" />
 
                     <table>
                         <tr>
@@ -252,7 +252,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img class=poster onclick="setMovieID('RMC')" src="../../media/A_Star_is_Born.png" width="330" height="489" alt="A_Star_is_Born.png" />
+                    <img class=poster onclick="showSections('RMC')" src="../../media/A_Star_is_Born.png" width="330" height="489" alt="A_Star_is_Born.png" />
 
                     <table>
                         <tr>
@@ -280,7 +280,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img class=poster onclick="setMovieID('ANM')" src="../../media/Ralph_Breaks_the_Internet_(2018_film_poster).png" width="330" height="489" alt="Ralph_Breaks_the_Internet" />
+                    <img class=poster onclick="showSections('ANM')" src="../../media/Ralph_Breaks_the_Internet_(2018_film_poster).png" width="330" height="489" alt="Ralph_Breaks_the_Internet" />
 
                     <table>
                         <tr>
@@ -316,7 +316,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                 <div class="column">
                     <!--                    <h2>Column</h2>-->
-                    <img class=poster onclick="setMovieID('AHF')" src="../../media/Boy_Erased_(2018_poster).png" width="330" height="489" alt="Boy_Erased" />
+                    <img class=poster onclick="showSections('AHF')" src="../../media/Boy_Erased_(2018_poster).png" width="330" height="489" alt="Boy_Erased" />
 
                     <table>
                         <tr>
@@ -376,7 +376,52 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                 </div>
 
                 <div id="synop_2">
-                    <h3>Boy Erased(MA 15)</h3>
+                    <h3>A Star is Born (M)</h3>
+                    <!--                    <h4>Movie Synopsis</h4>-->
+                    <p>
+                        <p>Talented rock star John Norman Howard has seen his career begin to decline. Too many years of concerts and managers and life on the road have made him cynical and the monotony has taken its toll. Then he meets the innocent, pure and very talented singer Esther Hoffman. As one of his songs in the movie says "I'm gonna take you girl, I'm gonna show you how." And he does. He shows Esther the way to stardom while forsaking his own career. As they fall in love, her success only makes his decline even more apparent.</p>
+                        <p>Director - Bradley Cooper</p>
+                        <p>CAST - Bradley Cooper, Lady Gaga, Andrew Dice Clay, Dave Chappelle, Sam Elliott</p>
+                        <p>Running Time - 135 mins</p>
+                        <p>Rated - M (Mature)</p>
+                </div>
+
+                <div id="trailer_detail_2">
+
+                    <!-- the iframe information was taken from YouTube -->
+                    <!--                    <span id="trailer_detail">-->
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nSbzyEJ8X9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!--                        </span>-->
+
+
+                </div>
+
+                <div id="synop_3">
+                    <h3>Ralph Breaks the Internet (PG)</h3>
+                    <!--                    <h4>Movie Synopsis</h4>-->
+                    <p>
+                        <p>Six years after saving the arcade from the Cy-Bugs attack and from Turbo's revenge, the story leaves Litwak's video arcade behind, venturing into the uncharted, expansive and thrilling world of the internet - which may or may not survive Ralph's wrecking. Video game bad guy Ralph and fellow misfit Vanellope von Schweetz must risk it all by traveling to the world wide web in search of a replacement part to save Vanellope's video game, Sugar Rush. In way over their heads, Ralph and Vanellope rely on the citizen of the internet - the netizens - to help navigate their way, including a website entrepreneur named Yesss, who is the head algorithm and the heart and soul of trend-making site "BuzzTube."</p>
+                        <p>Director - Phil Johnston, Rich Moore</p>
+                        <p>PRODUCER - Clark Spencer</p>
+                        <p>CAST - John C. Reilly, Sarah Silverman, Gal Gadot</p>
+                        <p>Running Time - 112 mins</p>
+                        <p>Rated - PG (Parental Guidance)</p>
+                </div>
+
+                <div id="trailer_detail_3">
+
+                    <!-- the iframe information was taken from YouTube -->
+                    <!--                    <span id="trailer_detail">-->
+
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/_BcYBFC6zfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!--                        </span>-->
+
+
+                </div>
+
+                <div id="synop_4">
+                    <h3>Boy Erased (MA 15)</h3>
                     <!--                    <h4>Movie Synopsis</h4>-->
                     <p>
                         <p>Boy Erased tells the courageous story of Jared Eamons (<a href="https://www.imdb.com/name/nm2348627/" target="_blank">Hedges</a>), the son of a Baptist pastor in a small American town, who must overcome the fallout of being outed to his parents (<a href="https://www.imdb.com/name/nm0000173/" target="_blank">Kidman</a> and <a href="https://www.imdb.com/name/nm0000128/" target="_blank">Crowe</a>). His parents struggle with reconciling their love for their son with their beliefs. Fearing a loss of family, friends, and community, Jared is pressured into attending a conversion therapy program. While there, Jared comes into conflict with its leader (<a href="https://www.imdb.com/name/nm0249291/" target="_blank">Edgerton</a>) and begins his journey to finding his own voice and accepting his true self.&nbsp;</p>
@@ -388,7 +433,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         <p>Rated - MA 15+ (A scene of strong sexual violence)</p>
                 </div>
 
-                <div id="trailer_detail_2">
+                <div id="trailer_detail_4">
 
                     <!-- the iframe information was taken from YouTube -->
                     <!--                    <span id="trailer_detail">-->
@@ -404,21 +449,40 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
             </div>
 
             <div id="book_buttons_1">
-                <h3>Make a Booking:</h3>
-                <button id="booking_button1" onclick="upateMovieDayTime('WED', '9')" type="button" class="button" value="Input Button">Wed : 9PM</button>
-                <button id="booking_button2" onclick="upateMovieDayTime('THU', '9')" type="button" class="button" value="Input Button">Thu : 9PM</button>
-                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9')" type="button" class="button" value="Input Button">Fri : 9PM</button>
-                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6')" type="button" class="button" value="Input Button">Sat : 6PM</button>
-                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6')" type="button" class="button" value="Input Button">Sun : 6PM</button>
+                <h3>Make a Booking for "The Girl in the Spider's Web":</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('WED', '9');showBookingFrom();displayBookingDayTime('Wednesday', '9:00 PM')" type="button" class="button" value="Input Button">Wed : 9PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('THU', '9');showBookingFrom();displayBookingDayTime('Thursday', '9:00 PM')" type="button" class="button" value="Input Button">Thu : 9PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9');showBookingFrom();displayBookingDayTime('Friday', '9:00 PM')" type="button" class="button" value="Input Button">Fri : 9PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6');showBookingFrom();displayBookingDayTime('Saturday', '6:00 PM')" type="button" class="button" value="Input Button">Sat : 6PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6');showBookingFrom();displayBookingDayTime('Sunday', '6:00 PM')" type="button" class="button" value="Input Button">Sun : 6PM</button>
             </div>
 
             <div id="book_buttons_2">
-                <h3>Make a Booking:</h3>
-                <button id="booking_button1" onclick="upateMovieDayTime('WED', '1111')" type="button" class="button" value="Input Button">Wed : 9PM</button>
-                <button id="booking_button2" onclick="upateMovieDayTime('THU', '9')" type="button" class="button" value="Input Button">Thu : 9PM</button>
-                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9')" type="button" class="button" value="Input Button">Fri : 9PM</button>
-                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6')" type="button" class="button" value="Input Button">Sat : 6PM</button>
-                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6')" type="button" class="button" value="Input Button">Sun : 6PM</button>
+                <h3>Make a Booking for "A Star is Born":</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('MON', '6');showBookingFrom();displayBookingDayTime('Monday', '6:00 PM')" type="button" class="button" value="Input Button">Mon : 6PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('TUE', '6');showBookingFrom();displayBookingDayTime('Tuesday', '6:00 PM')" type="button" class="button" value="Input Button">Tue : 6PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('SAT', '3');showBookingFrom();displayBookingDayTime('Saturday', '3:00 PM')" type="button" class="button" value="Input Button">Sat : 3PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6');showBookingFrom();displayBookingDayTime('Sunday', '6:00 PM')" type="button" class="button" value="Input Button">Sun : 6PM</button>
+            </div>
+
+            <div id="book_buttons_3">
+                <h3>Make a Booking for "Ralph Breaks the Internet":</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('MON', '12');showBookingFrom();displayBookingDayTime('Monday', '12:00 PM')" type="button" class="button" value="Input Button">Mon : 12PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('TUE', '12');showBookingFrom();displayBookingDayTime('Tuesday', '12:00 PM')" type="button" class="button" value="Input Button">Tue : 12PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('WED', '6');showBookingFrom();displayBookingDayTime('Wednesday', '6:00 PM')" type="button" class="button" value="Input Button">Wed : 6PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('THU', '6');showBookingFrom();displayBookingDayTime('Thursday', '6:00 PM')" type="button" class="button" value="Input Button">Thu : 6PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('FRI', '6');showBookingFrom();displayBookingDayTime('Friday', '6:00 PM')" type="button" class="button" value="Input Button">Fri : 6PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '12');showBookingFrom();displayBookingDayTime('Saturday', '12:00 PM')" type="button" class="button" value="Input Button">Sat : 12PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '12');showBookingFrom();displayBookingDayTime('Sunday', '12:00 PM')" type="button" class="button" value="Input Button">Sun : 12PM</button>
+            </div>
+
+            <div id="book_buttons_4">
+                <h3>Make a Booking for "Boy Erased":</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('WED', '12');showBookingFrom();displayBookingDayTime('Wednesday', '12:00 PM')" type="button" class="button" value="Input Button">Wed : 12PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('THU', '12');showBookingFrom();displayBookingDayTime('Thursday', '12:00 PM')" type="button" class="button" value="Input Button">Thu : 12PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '12');showBookingFrom();displayBookingDayTime('Friday', '12:00 PM')" type="button" class="button" value="Input Button">Fri : 12PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '9');showBookingFrom();displayBookingDayTime('Saturday', '9:00 PM')" type="button" class="button" value="Input Button">Sat : 9PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '9');showBookingFrom();displayBookingDayTime('Sunday', '9:00 PM')" type="button" class="button" value="Input Button">Sun : 9PM</button>
             </div>
 
 
@@ -428,12 +492,13 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
         </article>
         <article id="booking" class="ib">
             <h2>Booking</h2>
+           
             <hr class="line">
 
             <!--this was for testing purposes-->
             <!--            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" target="_blank"> -->
             <!--this is for making php information appear in the logging section of the page as per Trevor's guidance-->
-            <form name="myForm" onsubmit="logForm()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">
+            <form id="booking_form" name="myForm" onsubmit="logForm()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">
 
                 <div>
 
@@ -442,13 +507,14 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                     <input id="hidden_day" type="hidden" name="movie[day]" value="MON" />
                     <input id="hidden_time" type="hidden" name="movie[hour]" value=12>
 -->
-                    <script>getMovieTitle()</script>
+
 
                     <input id="hidden_mov_id" type="hidden" name="movie[id]" />
                     <input id="hidden_day" type="hidden" name="movie[day]" />
                     <input id="hidden_time" type="hidden" name="movie[hour]" />
                     <fieldset>
-                        <h3>The Girl in the Spider's Web (G) - Saturday 6 PM</h3>
+                        <h3 id="movie_title"></h3>
+                        <h4 id ="booking_time"></h4>
                         <fieldset>
                             <legend>Standard</legend>
                             <label id="standard_adult" for="standard adult">Standard Adult</label>
@@ -467,7 +533,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             </select>
                             <br />
                             <label id="standard_concession" for="standard concession">Standard Concession</label>
-                            <select name="seats[STP]" id=seats[STP]>
+                            <select name="seats[STP]" id=seats[STP] onchange="testOnChange()">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -481,8 +547,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                                 <option value=10>10</option>
                             </select>
                             <br />
-                            <label id="standard_child" for="standard child">Standard Child</label>
-                            <select name="seats[STC]" id="seats[STC]">
+                            <label id="standard_child" for="standard child" >Standard Child</label>
+                            <select name="seats[STC]" id="seats[STC]" onchange="testOnChange()">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -500,7 +566,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         <fieldset>
                             <legend>First Class</legend>
                             <label id="first_class_adult" for="first class adult">First Class Adult</label>
-                            <select name="seats[FCA]" id="seats[FCA]">
+                            <select name="seats[FCA]" id="seats[FCA]" onchange="testOnChange()">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -514,8 +580,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                                 <option value=10>10</option>
                             </select>
                             <br />
-                            <label id="first_class_concession" for="first class concession">First Class Concession</label>
-                            <select name="seats[FCP]" id="seats[FCP]">
+                            <label id="first_class_concession" for="first class concession" >First Class Concession</label>
+                            <select name="seats[FCP]" id="seats[FCP]" onchange="testOnChange()">
                                 <option value="">Please Select</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -531,8 +597,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                             <br />
 
 
-                            <label id="first_class_child" for="first class child">First Class Child</label>
-                            <select name="seats[FCC]" id="seats[FCC]">
+                            <label id="first_class_child" for="first class child" >First Class Child</label>
+                            <select name="seats[FCC]" id="seats[FCC]" onchange="testOnChange()">
                                 <!--                                onchange="myFunction()"-->
                                 <option value="">Please Selxect</option>
                                 <option value=1>1</option>
@@ -570,7 +636,8 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
                         <br />
                         <fieldset>
                             <label id="total" for="total">Total $</label>
-                            <input id="output_total" type="text" name="total" maxlength="7" onblur="fieldValueOutput('output_total')" />
+<!--                         <input id="output_total" type="text" name="total" maxlength="7" onblur="fieldValueOutput('output_total')" readonly/>-->
+                            <input type="textbox" name="total" id="output_total"  maxlength="7" onblur="fieldValueOutput('output_total')"/>
                             <button id="submit" type="submit" name="order" class="button" value="Submit">Order</button>
                         </fieldset>
                     </fieldset>
@@ -605,6 +672,7 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
+
             </script>
             <!--            <button type="button" onclick="myFunction()">Try it</button>-->
 

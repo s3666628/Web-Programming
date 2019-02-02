@@ -132,21 +132,25 @@ img {
 
 /*turn of sections of HTML by defult and then use JS to turn them on as needed*/
 
-/*
-#booking{
+#booking_form{
     display: none;
 }
-*/
 
 #synop_1, #book_buttons_1, #trailer_detail_1{
     display: none;
 }
 
-/*
 #synop_2, #book_buttons_2, #trailer_detail_2{
     display: none;
 }
-*/
+
+#synop_3, #book_buttons_3, #trailer_detail_3{
+    display: none;
+}
+
+#synop_4, #book_buttons_4, #trailer_detail_4{
+    display: none;
+}
 
 
 /*
