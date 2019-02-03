@@ -1,42 +1,38 @@
-//function myFunction() {
-//    var x = document.getElementById("seats[FCC]").value;
-//    document.getElementById("demo").innerHTML = "You selected: " + x;
-//    console.log(x);
-//}
-
+//global variables
 var movie_selected = "";
-var movies = {
-    AHF: "Boy Erased",
-    ACT: "The Girl in the Spider's Web",
-    ANM: "Ralph Breaks the Internet",
-    RMC: "A Star is Born"
-};
+var discount_flag = 0;
 
-
+// prices array
 var prices = {
     standard_Ad: {
-        o1: 14.00
+        o1: 14.00,
+        o2: 19.80
     },
     standard_Co: {
-        o1: 12.50
+        o1: 12.50,
+        o2: 17.50
     },
     standard_Ch: {
-        o1: 11.00
+        o1: 11.00,
+        o2: 15.30
     },
     first_Ad: {
-        o1: 24.00
+        o1: 24.00,
+        o2: 30.00
     },
     first_Co: {
-        o1: 22.50
+        o1: 22.50,
+        o2: 27.00
     },
     first_Ch: {
-        o1: 21.00
+        o1: 21.00,
+        o2: 24.00
     }
 };
 
-alert(prices.standard_Co.o3);
+//alert(prices.standard_Co.o2);
 
-
+// logging function
 function logForm() {
     //function to capture the form information when user clicks on the 'order' button
     console.log("logForm Function has been called");
@@ -50,25 +46,14 @@ function logForm() {
 
 
 
-//function setMovieID(movie_id) {
-//    //when user clicks on post image this will set the movie id in the hidden input field
-//    console.log("setMovieID function called with movie id = " + movie_id);
-//    //    global movie_selected = movie_id;
-//    document.getElementById("hidden_mov_id").value = movie_id;
-//    movie_selected = movie_id;
-//    console.log("movie selected = " + movie_selected);
-//    //update the buttons based on the movie selected
-//    //    var button = document.getElementById("booking").innerHTML
-//    //document.getElementById("debug_out").innerHTML = "Field element id is: " + fieldId + " and Element value is: " + elementIdValue;
-//}
-//// function that updates the buttons based on movie id that has been selected
-
-
-function upateMovieDayTime(day, time) {
+function upateMovieDayTime(day, time, discount) {
     //function to test alerting on the screen
 
-    window.alert("movie_id: " + movie_selected + " day: " + day + " time: " + time);
-    console.log("movie_id: " + movie_selected + " day: " + day + " time: " + time);
+    discount_flag = discount; //set the global variable
+    console.log(discount_flag);
+
+    window.alert("movie_id: " + movie_selected + " day: " + day + " time: " + time + "discount flag: " + discount_flag);
+    console.log("movie_id: " + movie_selected + " day: " + day + " time: " + time + "discount flag: " + discount_flag);
 
     document.getElementById("hidden_mov_id").value = movie_selected;
     document.getElementById("hidden_day").value = day;
@@ -86,10 +71,6 @@ function showSections(movie_id) {
     document.getElementById("hidden_mov_id").value = movie_id;
     //2 - show the sections for the movie id
 
-    //    ACT: "The Girl in the Spider's Web",
-    //    RMC: "A Star is Born"
-    //    ANM: "Ralph Breaks the Internet",
-    //    AHF: "Boy Erased",  
 
     var booking_form = document.getElementById("booking_form");
 
@@ -171,30 +152,11 @@ function showSections(movie_id) {
         synop_4.style.display = "block";
         trailer_detail_4.style.display = "block";
         book_buttons_4.style.display = "block";
-
-        //        booking_form.style.display = "block";
         document.getElementById("movie_title").innerHTML = "Boy Erased";
     }
 
 }
 
-//function setToHide(id_val){
-//    var x = document.getElementById(id_val);
-//    return x.style.display = "none";
-//    
-//}
-
-//    if movie_selected =='ACT' {
-//        var x = document.getElementById("SPD_WEB");
-//
-//        if (x.style.display === "none") {
-//            x.style.display = "block";
-//        } else {
-//            x.style.display = "none";
-//        }
-//
-//    }
-//}
 
 function showBookingFrom() {
     //displays the booking form if user clicks on a button - form is hidden by default
@@ -208,14 +170,20 @@ function displayBookingDayTime(day, time) {
     //    var subTitle = document.getElementsByClassName("booking_time");
     console.log(day);
     console.log(time);
+    console.log(discount_flag);
 
-    document.getElementById("booking_time").innerHTML = day + " " + "at " + time;
+    if (discount_flag === '1') {
+        console.log("called TRUE")
+        document.getElementById("booking_time").innerHTML = day + " " + "at " + time + " (Discount Price)";
+    } else {
+        console.log("called FALSE")
+        document.getElementById("booking_time").innerHTML = day + " " + "at " + time + " (Standard Price)";
+    }
 
 }
 
+function calcPrices() {
 
-function testOnChange() {
-    
 
     //function to test a non-button element and alert its value
     var numStandardAdultSeats = document.getElementById("seats[STA]").value;
@@ -232,35 +200,30 @@ function testOnChange() {
     console.log(numFirstAdultSeats);
     console.log(numFirstConcessionSeats);
     console.log(numFirstChildSeats);
+    // check if the global discount flag has been set
 
-
-    numStandardAdultSeats = Number(numStandardAdultSeats) * prices.standard_Ad.o1;
-    numStandardConcessionSeats = Number(numStandardConcessionSeats) * prices.standard_Co.o1;
-    numStandardChildSeats = Number(numStandardChildSeats) * prices.standard_Ch.o1;
-    numFirstAdultSeats = Number(numFirstAdultSeats) * prices.first_Ad.o1;
-    numFirstConcessionSeats = Number(numFirstConcessionSeats) * prices.first_Co.o1;
-    numFirstChildSeats = Number(numFirstChildSeats) * prices.first_Ch.o1;
-
-
-//    console.log(numStandardAdultSeats);
-//    console.log(numStandardConcessionSeats);
-//    console.log(numStandardChildSeats);
-//    console.log(numFirstAdultSeats);
-//    console.log(numFirstConcessionSeats);
-//    console.log(numFirstChildSeats);
+    if (discount_flag == '1') {
+        numStandardAdultSeats = Number(numStandardAdultSeats) * prices.standard_Ad.o1;
+        numStandardConcessionSeats = Number(numStandardConcessionSeats) * prices.standard_Co.o1;
+        numStandardChildSeats = Number(numStandardChildSeats) * prices.standard_Ch.o1;
+        numFirstAdultSeats = Number(numFirstAdultSeats) * prices.first_Ad.o1;
+        numFirstConcessionSeats = Number(numFirstConcessionSeats) * prices.first_Co.o1;
+        numFirstChildSeats = Number(numFirstChildSeats) * prices.first_Ch.o1;
+    } else {
+        numStandardAdultSeats = Number(numStandardAdultSeats) * prices.standard_Ad.o2;
+        numStandardConcessionSeats = Number(numStandardConcessionSeats) * prices.standard_Co.o2;
+        numStandardChildSeats = Number(numStandardChildSeats) * prices.standard_Ch.o2;
+        numFirstAdultSeats = Number(numFirstAdultSeats) * prices.first_Ad.o2;
+        numFirstConcessionSeats = Number(numFirstConcessionSeats) * prices.first_Co.o2;
+        numFirstChildSeats = Number(numFirstChildSeats) * prices.first_Ch.o2;
+    }
 
     var total = numStandardAdultSeats + numStandardConcessionSeats + numStandardChildSeats + numFirstAdultSeats + numFirstConcessionSeats + numFirstChildSeats;
-
-    //    var totalOut = document.getElementsByClassName("output_total");
+    total = total.toFixed(2);
     document.getElementById("output_total").value = total;
-    //    console.log(typeof (numStandardSeats))
-
-    //    var elementId = elementId *12; 
-    //    window.alert(elementId);
-    //    console.log(elementId);
-    //    window.alert("enter alerting window function here");
-
 }
+
+
 
 function fieldValueOutput(fieldId) {
     //function to get the id of the field and the value entered
@@ -278,4 +241,61 @@ function testEventTarget(event) {
     //    window.alert("Triggered by a " + x.tagName + " element");
     console.log("Triggered by a " + x.tagName + " element");
 
+}
+
+//basic layout for the validation of fields was taken from here
+//http://form.guide/snippets/javascript-form-validation-using-regular-expression.html
+
+function validateNameInput() {
+    var user_name = document.getElementById("input_name").value;
+    console.log(user_name);
+    var nameRGEX = /^[a-zA-Z \-.']{1,100}$/; //taken from tutorial answer
+    //    var phoneRGEX = /^0/;
+    var nameResult = nameRGEX.test(user_name);
+    console.log(user_name);
+    if (nameResult === false) {
+        alert("name:" + nameResult);
+    } else {
+        alert("I like it");
+    }
+
+}
+
+function validateMobileInput() {
+    var phoneNumber = document.getElementById("input_mobile").value;
+    console.log(phoneNumber);
+    var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+    //    var phoneRGEX = /^0/;
+    var phoneResult = phoneRGEX.test(phoneNumber);
+    console.log(phoneResult);
+    if (phoneResult === false) {
+        alert("mobile:" + phoneResult);
+    } else {
+        alert("I like it");
+    }
+
+}
+
+function validateCCInput() {
+    var credit_card = document.getElementById("input_cc").value;
+    console.log(credit_card);
+    var MastercardRegEx = /^(5[1-5][0-9]{14}|2)22[1-9][0-9]{12}|2[3-9]/;
+    var VisaCardRegEx = /^4[0-9]{12}(?:[0-9]{3})?$/;
+
+    var cc_MC_Result = MastercardRegEx.test(credit_card);
+    var cc_VC_Result = VisaCardRegEx.test(credit_card);
+
+    console.log(credit_card);
+    if (cc_MC_Result === false && cc_VC_Result === false) {
+        alert("Invalid Credit Card:");
+    } else {
+        alert("Valid Credit Card");
+    }
+
+}
+//script to clear form
+
+
+function clearForm() {
+    document.getElementById("booking_form").reset();
 }

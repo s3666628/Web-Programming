@@ -24,7 +24,7 @@ echo <<< MOVIETABLE
                 <tr>
                     <th>Seat Type</th>
                     <th>Seat Code</th>
-                    <th>All day Monday and Wednesday AND 12pm on Weekday</th>
+                    <th>All day Monday and Wednesday AND 12 PM (Weekdays Only)</th>
                     <th>All other times</th>
                 </tr>
                 <tr>
