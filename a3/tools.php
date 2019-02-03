@@ -74,6 +74,49 @@ echo <<< MOVIETABLE
 MOVIETABLE;
 }
 
+function movieButtons()
+{
+echo <<< MOVIEBUTTONS
+
+            <div id="book_buttons_1">
+                <h3>Make a Booking for "The Girl in the Spider's Web":</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('WED', '9', '1');showBookingFrom();displayBookingDayTime('Wednesday', '9:00 PM')" type="button" class="button" value="Input Button">Wed : 9PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('THU', '9', '0');showBookingFrom();displayBookingDayTime('Thursday', '9:00 PM')" type="button" class="button" value="Input Button">Thu : 9PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9', '0');showBookingFrom();displayBookingDayTime('Friday', '9:00 PM')" type="button" class="button" value="Input Button">Fri : 9PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6', '0');showBookingFrom();displayBookingDayTime('Saturday', '6:00 PM')" type="button" class="button" value="Input Button">Sat : 6PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6', '0');showBookingFrom();displayBookingDayTime('Sunday', '6:00 PM')" type="button" class="button" value="Input Button">Sun : 6PM</button>
+            </div>
+
+            <div id="book_buttons_2">
+                <h3>Make a Booking for "A Star is Born":</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('MON', '6', '1');showBookingFrom();displayBookingDayTime('Monday', '6:00 PM')" type="button" class="button" value="Input Button">Mon : 6PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('TUE', '6', '0');showBookingFrom();displayBookingDayTime('Tuesday', '6:00 PM')" type="button" class="button" value="Input Button">Tue : 6PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('SAT', '3', '0');showBookingFrom();displayBookingDayTime('Saturday', '3:00 PM')" type="button" class="button" value="Input Button">Sat : 3PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6', '0');showBookingFrom();displayBookingDayTime('Sunday', '6:00 PM')" type="button" class="button" value="Input Button">Sun : 6PM</button>
+            </div>
+
+            <div id="book_buttons_3">
+                <h3>Make a Booking for "Ralph Breaks the Internet":</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('MON', '12','1');showBookingFrom();displayBookingDayTime('Monday', '12:00 PM')" type="button" class="button" value="Input Button">Mon : 12PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('TUE', '12', '1');showBookingFrom();displayBookingDayTime('Tuesday', '12:00 PM')" type="button" class="button" value="Input Button">Tue : 12PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('WED', '6', '1');showBookingFrom();displayBookingDayTime('Wednesday', '6:00 PM')" type="button" class="button" value="Input Button">Wed : 6PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('THU', '6', '0');showBookingFrom();displayBookingDayTime('Thursday', '6:00 PM')" type="button" class="button" value="Input Button">Thu : 6PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('FRI', '6', '0');showBookingFrom();displayBookingDayTime('Friday', '6:00 PM')" type="button" class="button" value="Input Button">Fri : 6PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '12', '0');showBookingFrom();displayBookingDayTime('Saturday', '12:00 PM')" type="button" class="button" value="Input Button">Sat : 12PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '12', '0');showBookingFrom();displayBookingDayTime('Sunday', '12:00 PM')" type="button" class="button" value="Input Button">Sun : 12PM</button>
+            </div>
+
+            <div id="book_buttons_4">
+                <h3>Make a Booking for "Boy Erased":</h3>
+                <button id="booking_button1" onclick="upateMovieDayTime('WED', '12', '1');showBookingFrom();displayBookingDayTime('Wednesday', '12:00 PM')" type="button" class="button" value="Input Button">Wed : 12PM</button>
+                <button id="booking_button2" onclick="upateMovieDayTime('THU', '12', '1');showBookingFrom();displayBookingDayTime('Thursday', '12:00 PM')" type="button" class="button" value="Input Button">Thu : 12PM</button>
+                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '12', '1');showBookingFrom();displayBookingDayTime('Friday', '12:00 PM')" type="button" class="button" value="Input Button">Fri : 12PM</button>
+                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '9', '0');showBookingFrom();displayBookingDayTime('Saturday', '9:00 PM')" type="button" class="button" value="Input Button">Sat : 9PM</button>
+                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '9', '0');showBookingFrom();displayBookingDayTime('Sunday', '9:00 PM')" type="button" class="button" value="Input Button">Sun : 9PM</button>
+            </div>
+
+MOVIEBUTTONS;
+}
 function print_footer()
 {
   print <<< FOOBAR

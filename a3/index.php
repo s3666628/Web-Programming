@@ -59,7 +59,7 @@ require_once("tools.php");
 </head>
 <!--; onload="hideSections()"-->
 
-<body onclick="testEventTarget(event)"; onload="clearForm()">
+<body onclick="testEventTarget(event)" onload="clearForm()">
 
     <header>
 
@@ -447,47 +447,9 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
 
             </div>
-
-            <div id="book_buttons_1">
-                <h3>Make a Booking for "The Girl in the Spider's Web":</h3>
-                <button id="booking_button1" onclick="upateMovieDayTime('WED', '9', '1');showBookingFrom();displayBookingDayTime('Wednesday', '9:00 PM')" type="button" class="button" value="Input Button">Wed : 9PM</button>
-                <button id="booking_button2" onclick="upateMovieDayTime('THU', '9', '0');showBookingFrom();displayBookingDayTime('Thursday', '9:00 PM')" type="button" class="button" value="Input Button">Thu : 9PM</button>
-                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '9', '0');showBookingFrom();displayBookingDayTime('Friday', '9:00 PM')" type="button" class="button" value="Input Button">Fri : 9PM</button>
-                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '6', '0');showBookingFrom();displayBookingDayTime('Saturday', '6:00 PM')" type="button" class="button" value="Input Button">Sat : 6PM</button>
-                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6', '0');showBookingFrom();displayBookingDayTime('Sunday', '6:00 PM')" type="button" class="button" value="Input Button">Sun : 6PM</button>
-            </div>
-
-            <div id="book_buttons_2">
-                <h3>Make a Booking for "A Star is Born":</h3>
-                <button id="booking_button1" onclick="upateMovieDayTime('MON', '6', '1');showBookingFrom();displayBookingDayTime('Monday', '6:00 PM')" type="button" class="button" value="Input Button">Mon : 6PM</button>
-                <button id="booking_button2" onclick="upateMovieDayTime('TUE', '6', '0');showBookingFrom();displayBookingDayTime('Tuesday', '6:00 PM')" type="button" class="button" value="Input Button">Tue : 6PM</button>
-                <button id="booking_button3" onclick="upateMovieDayTime('SAT', '3', '0');showBookingFrom();displayBookingDayTime('Saturday', '3:00 PM')" type="button" class="button" value="Input Button">Sat : 3PM</button>
-                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '6', '0');showBookingFrom();displayBookingDayTime('Sunday', '6:00 PM')" type="button" class="button" value="Input Button">Sun : 6PM</button>
-            </div>
-
-            <div id="book_buttons_3">
-                <h3>Make a Booking for "Ralph Breaks the Internet":</h3>
-                <button id="booking_button1" onclick="upateMovieDayTime('MON', '12','1');showBookingFrom();displayBookingDayTime('Monday', '12:00 PM')" type="button" class="button" value="Input Button">Mon : 12PM</button>
-                <button id="booking_button2" onclick="upateMovieDayTime('TUE', '12', '1');showBookingFrom();displayBookingDayTime('Tuesday', '12:00 PM')" type="button" class="button" value="Input Button">Tue : 12PM</button>
-                <button id="booking_button3" onclick="upateMovieDayTime('WED', '6', '1');showBookingFrom();displayBookingDayTime('Wednesday', '6:00 PM')" type="button" class="button" value="Input Button">Wed : 6PM</button>
-                <button id="booking_button4" onclick="upateMovieDayTime('THU', '6', '0');showBookingFrom();displayBookingDayTime('Thursday', '6:00 PM')" type="button" class="button" value="Input Button">Thu : 6PM</button>
-                <button id="booking_button5" onclick="upateMovieDayTime('FRI', '6', '0');showBookingFrom();displayBookingDayTime('Friday', '6:00 PM')" type="button" class="button" value="Input Button">Fri : 6PM</button>
-                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '12', '0');showBookingFrom();displayBookingDayTime('Saturday', '12:00 PM')" type="button" class="button" value="Input Button">Sat : 12PM</button>
-                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '12', '0');showBookingFrom();displayBookingDayTime('Sunday', '12:00 PM')" type="button" class="button" value="Input Button">Sun : 12PM</button>
-            </div>
-
-            <div id="book_buttons_4">
-                <h3>Make a Booking for "Boy Erased":</h3>
-                <button id="booking_button1" onclick="upateMovieDayTime('WED', '12', '1');showBookingFrom();displayBookingDayTime('Wednesday', '12:00 PM')" type="button" class="button" value="Input Button">Wed : 12PM</button>
-                <button id="booking_button2" onclick="upateMovieDayTime('THU', '12', '1');showBookingFrom();displayBookingDayTime('Thursday', '12:00 PM')" type="button" class="button" value="Input Button">Thu : 12PM</button>
-                <button id="booking_button3" onclick="upateMovieDayTime('FRI', '12', '1');showBookingFrom();displayBookingDayTime('Friday', '12:00 PM')" type="button" class="button" value="Input Button">Fri : 12PM</button>
-                <button id="booking_button4" onclick="upateMovieDayTime('SAT', '9', '0');showBookingFrom();displayBookingDayTime('Saturday', '9:00 PM')" type="button" class="button" value="Input Button">Sat : 9PM</button>
-                <button id="booking_button5" onclick="upateMovieDayTime('SUN', '9', '0');showBookingFrom();displayBookingDayTime('Sunday', '9:00 PM')" type="button" class="button" value="Input Button">Sun : 9PM</button>
-            </div>
-
-
-
-
+            <?php
+movieButtons();
+?>
 
         </article>
         <article id="booking" class="ib">
@@ -619,43 +581,29 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
 
                         <fieldset>
                             <label id="name" for="name">Name</label>
-                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name');validateNameInput()" maxlength="20" required/>
+                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name');validateNameInput()" maxlength="20" required />
                             <br />
                             <label id="email" for="email">Email</label>
                             <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')" required />
                             <br />
                             <label id="mobile" for="mobile">Mobile</label>
-                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile');validateMobileInput()" required/>
+                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile');validateMobileInput()" required />
                             <br />
                             <label id="cc" for="credit card">Credit Card</label>
-                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc');validateCCInput()" required/>
+                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc');validateCCInput()" required />
                             <br />
                             <label id="expiry" for="expiry date">Expiry Date</label>
-                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')"required />
+                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')" required />
                         </fieldset>
                         <br />
                         <fieldset>
                             <label id="total" for="total">Total $</label>
                             <!--                         <input id="output_total" type="text" name="total" maxlength="7" onblur="fieldValueOutput('output_total')" readonly/>-->
-                            <input type="textbox" name="total" id="output_total" maxlength="7" onblur="fieldValueOutput('output_total')"  readonly/>
+                            <input type="textbox" name="total" id="output_total" maxlength="7" onblur="fieldValueOutput('output_total')" readonly />
                             <button id="submit" type="submit" name="order" class="button" value="Submit">Order</button>
                         </fieldset>
                     </fieldset>
 
-                    <!--
-                    <p>Select a new car from the list.</p>
-
-                    <select id="mySelect" onchange="myFunction()">
-                        <option value="Audi">Audi
-                        <option value="BMW">BMW
-                        <option value="Mercedes">Mercedes
-                        <option value="Volvo">Volvo
-                    </select>
-
-                    <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
-
-                    <p id="demo"></p>
--->
 
                 </div>
 
@@ -672,7 +620,6 @@ https://www.w3schools.com/CSS/tryit.asp?filename=trycss_website_layout_grid
     <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
-
             </script>
             <!--            <button type="button" onclick="myFunction()">Try it</button>-->
 
