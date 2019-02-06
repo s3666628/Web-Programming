@@ -59,7 +59,8 @@ require_once("tools.php");
 </head>
 <!--; onload="hideSections()"-->
 
-<body onclick="testEventTarget(event)" onload="clearForm()">
+<body onclick="testEventTarget(event)" >
+<!--    onload="clearForm()"-->
 
     <header>
 
@@ -460,7 +461,8 @@ movieButtons();
             <!--this was for testing purposes-->
             <!--            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" target="_blank"> -->
             <!--this is for making php information appear in the logging section of the page as per Trevor's guidance-->
-            <form id="booking_form" name="myForm" onsubmit="logForm()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">
+<!--            <form id="booking_form" name="myForm" onsubmit="logForm(); validateMobileInput(); validateCCInput(); validateNameInput()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">-->
+                        <form id="booking_form" name="myForm" onsubmit=" return logForm() && return validateMobileInput() && return validateCCInput() && return validateNameInput()" action="index.php" method="POST" target="_blank">
 
                 <div>
 

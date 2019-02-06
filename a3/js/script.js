@@ -253,11 +253,11 @@ function validateNameInput() {
     //    var phoneRGEX = /^0/;
     var nameResult = nameRGEX.test(user_name);
     console.log(user_name);
-    if (nameResult === false) {
-        alert("name:" + nameResult);
-    } else {
-        alert("I like it");
-    }
+//    if (nameResult === false) {
+//        alert("name:" + nameResult);
+//    } else {
+//        alert("I like it");
+//    }
 
 }
 
@@ -268,29 +268,26 @@ function validateMobileInput() {
     //    var phoneRGEX = /^0/;
     var phoneResult = phoneRGEX.test(phoneNumber);
     console.log(phoneResult);
-    if (phoneResult === false) {
-        alert("mobile:" + phoneResult);
-    } else {
-        alert("I like it");
-    }
+//    if (phoneResult === false) {
+//        alert("mobile:" + phoneResult);
+//    } else {
+//        alert("I like it");
+//    }
 
 }
 
 function validateCCInput() {
     var credit_card = document.getElementById("input_cc").value;
     console.log(credit_card);
-    var MastercardRegEx = /^(5[1-5][0-9]{14}|2)22[1-9][0-9]{12}|2[3-9]/;
-    var VisaCardRegEx = /^4[0-9]{12}(?:[0-9]{3})?$/;
+    var creditcardRegEx = /(^[0-9]{16}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
+    var cc_Result = creditcardRegEx.test(credit_card);
 
-    var cc_MC_Result = MastercardRegEx.test(credit_card);
-    var cc_VC_Result = VisaCardRegEx.test(credit_card);
-
-    console.log(credit_card);
-    if (cc_MC_Result === false && cc_VC_Result === false) {
-        alert("Invalid Credit Card:");
-    } else {
-        alert("Valid Credit Card");
-    }
+//    console.log(credit_card);
+//    if (cc_MC_Result === false && cc_VC_Result === false) {
+//        alert("Invalid Credit Card:");
+//    } else {
+//        alert("Valid Credit Card");
+//    }
 
 }
 //script to clear form
