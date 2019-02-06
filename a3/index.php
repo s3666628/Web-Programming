@@ -583,7 +583,7 @@ movieButtons();
 
                         <fieldset>
                             <label id="name" for="name">Name</label>
-                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name');validateNameInput()" maxlength="20" required />
+                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name');validateNameInput()" maxlength="20"/>
                             <br />
                             <label id="email" for="email">Email</label>
                             <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')" required />

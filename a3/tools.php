@@ -1,6 +1,80 @@
 <?php
   session_start();
 
+//Array
+//(
+//    [movie] => Array
+//        (
+//            [id] => AHF
+//            [day] => WED
+//            [hour] => 12
+//        )
+//
+//    [seats] => Array
+//        (
+//            [STA] => 1
+//            [STP] => 1
+//            [STC] => 
+//            [FCA] => 
+//            [FCP] => 
+//            [FCC] => 
+//        )
+//
+//    [cust] => Array
+//        (
+//            [name] => philip beeby
+//            [email] => pbeeby@mac.comn
+//            [mobile] => 2398239832
+//            [card] => 2332
+//            [expiry] => 2323
+//        )
+//
+//    [total] => 26.50
+//    [order] => Submit
+//)
+
+if($_POST)
+{
+
+echo 'movie id: ' . htmlspecialchars($_POST["movie"]["id"])." ";
+echo 'movie day: ' . htmlspecialchars($_POST["movie"]["day"])." ";
+echo 'movie hour: ' . htmlspecialchars($_POST["movie"]["hour"])." ";
+    
+echo 'seats STA: ' . htmlspecialchars($_POST["seats"]["STA"])." ";
+echo 'seats STP: ' . htmlspecialchars($_POST["seats"]["STP"])." ";
+echo 'seats STC: ' . htmlspecialchars($_POST["seats"]["STC"])." ";
+    
+echo 'seats FCA: ' . htmlspecialchars($_POST["seats"]["FCA"])." ";
+echo 'seats FCP: ' . htmlspecialchars($_POST["seats"]["FCP"])." ";
+echo 'seats FCC: ' . htmlspecialchars($_POST["seats"]["FCC"])." ";
+    
+echo 'name : ' . htmlspecialchars($_POST["cust"]["name"])." ";
+echo 'email : ' . htmlspecialchars($_POST["cust"]["email"])." ";
+echo 'mobile : ' . htmlspecialchars($_POST["cust"]["mobile"])." ";
+echo 'card : ' . htmlspecialchars($_POST["cust"]["card"])." ";
+echo 'expiry : ' . htmlspecialchars($_POST["cust"]["expiry"])." ";
+echo 'total : ' . htmlspecialchars($_POST["total"])." ";    
+} 
+    
+//$errors = array();
+//    
+//if(empty($_POST['cust']['name']))
+//{
+//    $errors["cusomername1"] = "movie id is blank";
+//}
+//
+//    
+//
+//if(count($errors==0))
+//    
+//    {
+//    //redirect to success page
+////    header("Location: index.php");
+//    exit();
+//    
+//    }
+//}
+
 // Put your PHP functions and modules here
 function preShow( $arr, $returnAsString=false ) {
   $ret  = '<pre>' . print_r($arr, true) . '</pre>';
