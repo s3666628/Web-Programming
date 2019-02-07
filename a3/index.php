@@ -59,8 +59,8 @@ require_once("tools.php");
 </head>
 <!--; onload="hideSections()"-->
 
-<body onclick="testEventTarget(event)" >
-<!--    onload="clearForm()"-->
+<body onclick="testEventTarget(event)">
+    <!--    onload="clearForm()"-->
 
     <header>
 
@@ -461,8 +461,9 @@ movieButtons();
             <!--this was for testing purposes-->
             <!--            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" target="_blank"> -->
             <!--this is for making php information appear in the logging section of the page as per Trevor's guidance-->
-<!--            <form id="booking_form" name="myForm" onsubmit="logForm(); validateMobileInput(); validateCCInput(); validateNameInput()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">-->
-                        <form id="booking_form" name="myForm" onsubmit=" return logForm() && return validateMobileInput() && return validateCCInput() && return validateNameInput()" action="index.php" method="POST" target="_blank">
+            <!--            <form id="booking_form" name="myForm" onsubmit="logForm(); validateMobileInput(); validateCCInput(); validateNameInput()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">-->
+            <form id="booking_form" name="myForm" onsubmit="return (logForm() && validateMobileInput() && validateCCInput() && validateNameInput());" action="index.php" method="POST" target="_blank">
+
 
                 <div>
 
@@ -583,7 +584,7 @@ movieButtons();
 
                         <fieldset>
                             <label id="name" for="name">Name</label>
-                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name');validateNameInput()" maxlength="20"/>
+                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name');validateNameInput()" maxlength="20" />
                             <br />
                             <label id="email" for="email">Email</label>
                             <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')" required />
@@ -622,6 +623,7 @@ movieButtons();
     <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
+
             </script>
             <!--            <button type="button" onclick="myFunction()">Try it</button>-->
 
