@@ -248,16 +248,18 @@ function testEventTarget(event) {
 
 function validateNameInput() {
     var user_name = document.getElementById("input_name").value;
-    console.log(user_name);
+    console.log(user_name + "Validate Name has been called");
     var nameRGEX = /^[a-zA-Z \-.']{1,100}$/; //taken from tutorial answer
     //    var phoneRGEX = /^0/;
     var nameResult = nameRGEX.test(user_name);
-    console.log(user_name);
-//    if (nameResult === false) {
-//        alert("name:" + nameResult);
-//    } else {
-//        alert("I like it");
-//    }
+    console.log(user_name + "is called");
+    if (nameResult == false) {
+        alert("please enter a valid name");
+        //    if (nameResult === false) {
+        //        alert("name:" + nameResult);
+        //    } else {
+        //        alert("I like it");
+    }
 
 }
 
@@ -268,11 +270,14 @@ function validateMobileInput() {
     //    var phoneRGEX = /^0/;
     var phoneResult = phoneRGEX.test(phoneNumber);
     console.log(phoneResult);
-//    if (phoneResult === false) {
-//        alert("mobile:" + phoneResult);
-//    } else {
-//        alert("I like it");
-//    }
+    if (phoneResult == false) {
+        alert("please enter a valid mobile number");
+    }
+    //    if (phoneResult === false) {
+    //        alert("mobile:" + phoneResult);
+    //    } else {
+    //        alert("I like it");
+    //    }
 
 }
 
@@ -281,13 +286,17 @@ function validateCCInput() {
     console.log(credit_card);
     var creditcardRegEx = /(^[0-9]{16}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
     var cc_Result = creditcardRegEx.test(credit_card);
+    console.log(cc_Result);
+    if (cc_Result == false) {
+        alert("please enter a valid credit card");
+    }
 
-//    console.log(credit_card);
-//    if (cc_MC_Result === false && cc_VC_Result === false) {
-//        alert("Invalid Credit Card:");
-//    } else {
-//        alert("Valid Credit Card");
-//    }
+    //    console.log(credit_card);
+    //    if (cc_MC_Result === false && cc_VC_Result === false) {
+    //        alert("Invalid Credit Card:");
+    //    } else {
+    //          alert("Valid Credit Card");
+    //    }
 
 }
 //script to clear form
