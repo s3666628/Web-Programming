@@ -3,41 +3,65 @@ require_once("tools.php");
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Order Successful</title>
-</head>
-    
-<php? echo $_POST["cust"]["name"];?>
-<php?     
-if($_POST)
-{
 
-echo 'movie id: ' . htmlspecialchars($_POST["movie"]["id"])." ";
-echo 'movie day: ' . htmlspecialchars($_POST["movie"]["day"])." ";
-echo 'movie hour: ' . htmlspecialchars($_POST["movie"]["hour"])." ";
+<head>
+    <meta charset="UTF-8">
+    <title>Order Successful</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Booking Complete</title>
+    <!-- Keep wireframe.css for debugging, add your css to style.css -->
+    <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
+    <script src='../wireframe.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Slabo+27px|" rel="stylesheet">
     
-echo 'seats STA: ' . htmlspecialchars($_POST["seats"]["STA"])." ";
-echo 'seats STP: ' . htmlspecialchars($_POST["seats"]["STP"])." ";
-echo 'seats STC: ' . htmlspecialchars($_POST["seats"]["STC"])." ";
+</head>
+
+
+<span class="error">*
+    <?php echo $_SESSION['cust']['expiry'];?></span>
+<span class="error">*
+    <?php echo $_POST['cust']['expiry'];?></span>
+
+
+
+
+<?php 
+      
+ 
+if (count($_SESSION) ==0)
+    {
+    header("Location: index.php");
+    exit();
+    }
+else{
+      echo "this is nice";
+      echo $_SESSION['cust']['name'];
+      echo $_SESSION['cust']['email'];
+      echo $_SESSION['cust']['mobile'];
+      echo $_SESSION['cust']['card'];
+      echo $_SESSION['cust']['expiry'];
+      
+      }
     
-echo 'seats FCA: ' . htmlspecialchars($_POST["seats"]["FCA"])." ";
-echo 'seats FCP: ' . htmlspecialchars($_POST["seats"]["FCP"])." ";
-echo 'seats FCC: ' . htmlspecialchars($_POST["seats"]["FCC"])." ";
-    
-echo 'name : ' . htmlspecialchars($_POST["cust"]["name"])." ";
-echo 'email : ' . htmlspecialchars($_POST["cust"]["email"])." ";
-echo 'mobile : ' . htmlspecialchars($_POST["cust"]["mobile"])." ";
-echo 'card : ' . htmlspecialchars($_POST["cust"]["card"])." ";
-echo 'expiry : ' . htmlspecialchars($_POST["cust"]["expiry"])." ";
-echo 'total : ' . htmlspecialchars($_POST["total"])." ";    
-}    
+      
       ?>
+    <h1>Your order has been received - ss Thanks</h1>
     
+    <p class="session_message">Booking Name: <?php echo $_SESSION['cust']['name'];?></p>
+    <p class="session_message">Booking Email: <?php echo $_SESSION['cust']['email'];?></p>
+    <p class="session_message">Mobile: <?php echo $_SESSION['cust']['mobile'];?></p>
+    <p class="session_message">Credit Card: <?php echo $_SESSION['cust']['card'];?></p>
+    <p class="session_message">Expiry Date: <?php echo $_SESSION['cust']['expiry'];?></p>
+    
+
+
 
 <body>
-<h1>Your order has been received - ss Thanks</h1>
+  
 
 </body>
 
-</html> 
+</html>

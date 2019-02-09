@@ -1,6 +1,8 @@
 <?php
+
 require_once("tools.php");
 ?>
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -61,6 +63,270 @@ require_once("tools.php");
 
 <body onclick="testEventTarget(event)">
     <!--    onload="clearForm()"-->
+    <?php 
+session_start();    
+//unset ( $_SESSION['cust'], $_SESSION['movie'], $_SESSION['seats']) );
+    
+//echo htmlspecialchars($_POST["movie"]["name"]);
+//echo 'movie id: ' . htmlspecialchars($_POST["movie"]["id"])." ";
+//echo 'movie day: ' . htmlspecialchars($_POST["movie"]["day"])." ";
+//echo 'movie hour: ' . htmlspecialchars($_POST["movie"]["hour"])." ";
+//    
+//echo 'seats STA: ' . htmlspecialchars($_POST["seats"]["STA"])." ";
+//echo 'seats STP: ' . htmlspecialchars($_POST["seats"]["STP"])." ";
+//echo 'seats STC: ' . htmlspecialchars($_POST["seats"]["STC"])." ";
+//    
+//echo 'seats FCA: ' . htmlspecialchars($_POST["seats"]["FCA"])." ";
+//echo 'seats FCP: ' . htmlspecialchars($_POST["seats"]["FCP"])." ";
+//echo 'seats FCC: ' . htmlspecialchars($_POST["seats"]["FCC"])." ";
+//    
+//echo 'name : ' . htmlspecialchars($_POST["cust"]["name"])." ";
+//echo 'email : ' . htmlspecialchars($_POST["cust"]["email"])." ";
+//echo 'mobile : ' . htmlspecialchars($_POST["cust"]["mobile"])." ";
+//echo 'card : ' . htmlspecialchars($_POST["cust"]["card"])." ";
+//echo 'expiry : ' . htmlspecialchars($_POST["cust"]["expiry"])." ";
+//echo 'total : ' . htmlspecialchars($_POST["total"])." ";     
+
+$name = $email = $mobile = $card = $expiry = "";
+//$nameErr = $emailErr = $mobileErr = $cardErr = $expiryErr = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+     $errors = array();
+
+{
+    
+    if (empty($_POST["movie"]["id"]))
+    {
+        $errors["movie_id"] = "Movie id is required";
+        echo "Movie id is required";
+    }
+    
+    else 
+    {
+    $name = test_input($_POST["movie"]["name"]);
+    }
+    
+    
+    if (empty($_POST["movie"]["day"]))
+    {
+        $errors["movie_day"] = "Movie id is required";
+        echo "Movie day is required";
+    }
+    
+    else 
+    {
+    $name = test_input($_POST["movie"]["day"]);
+    }
+    
+    
+    if (empty($_POST["movie"]["hour"]))
+    {
+        $errors["movie_hour"] = "Movie hour is required";
+        echo "Movie hour is required";
+    }
+    
+    else 
+    {
+    $name = test_input($_POST["movie"]["hour"]);
+    }
+
+    
+        
+//    if (empty($_POST["movie"]["hour"]))
+//    {
+//        $errors["movie_hour"] = "Movie hour is required";
+//    }
+//    
+//    else 
+//    {
+//    $name = test_input($_POST["movie"]["hour"]);
+//    }
+
+    
+    
+    
+    if (empty($_POST["cust"]["name"]))
+    {
+        $nameErr = "Name is required";
+        $errors["name1"] = "Name is required";
+    }
+    
+    else 
+    {
+    $name = test_input($_POST["cust"]["name"]);
+    }
+    
+    
+    if (empty($_POST["cust"]["email"]))
+    {
+        $emailErr = "Email is required";
+        $errors["email1"] = "Email is required";
+    }
+    
+    else 
+    {
+    $email = test_input($_POST["cust"]["email"]);
+    }
+    
+    
+    if (empty($_POST["cust"]["mobile"]))
+    {
+        $mobileErr = "Mobile is required";
+        $errors["mobile1"] = "mobile is required";
+    }
+    
+    else 
+    {
+    $mobile = test_input($_POST["cust"]["mobile"]);
+    }    
+    
+    
+    
+    if (empty($_POST["cust"]["card"]))
+    {
+        $cardErr = "Card is required";
+        $errors["card1"] = "Card is required";
+    }
+    
+    else 
+    {
+    $card = test_input($_POST["cust"]["card"]);
+    }    
+        
+    if (empty($_POST["cust"]["expiry"]))
+    {
+        $expiryErr = "Expiry is required";
+        $errors["expiry1"] = "Expiry is required";
+    }
+    
+    else
+    {
+    $expiry = test_input($_POST["cust"]["expiry"]);
+
+    }
+    if (count($errors) ==0)
+    {
+//$name = $email = $mobile = $card = $expiry = "";        
+    $_SESSION['cust']['name'] = $name;
+    $_SESSION['cust']['email'] = $email;    
+    $_SESSION['cust']['mobile'] = $mobile;    
+    $_SESSION['cust']['card'] = $card;    
+    $_SESSION['cust']['$expiry'] = $expiry;        
+    header("Location: order_complete.php");
+    exit();
+    }
+    
+}
+    
+//        if(count($errors < 1))
+//    
+//    {
+////    redirect to success page
+//    header("Location: order_complete.php");
+//    exit();
+//    
+//    }
+    
+//  $name = test_input($_POST["cust"]["name"]);
+//  $email = test_input($_POST["cust"]["email"]);    
+//  $mobile = test_input($_POST["cust"]["mobile"]);
+//  $card = test_input($_POST["cust"]["card"]);
+//  $expiry = test_input($_POST["cust"]["expiry"]);
+//}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+//if($_POST)
+//{
+//
+//    $errors = array();
+//    echo "test count post =";
+//    echo count($_POST); 
+//    // check name
+//    if(strlen($_POST["cust"]["name"]) < 2)
+//   {
+//       $errors["name1"] = "You must enter a name longer than one character";
+//       echo $errors["name1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    if(empty($errors["name1"])) echo $errors["name1"];
+//    {
+//        $errors["name2"] = "You must enter a name in the name field";
+//    }
+//
+//    // check email
+//    if(strlen($_POST["cust"]["email"]) < 2)
+//   {
+//       $errors["email1"] = "You must enter a proper email address";
+//        echo $errors["email1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    if(empty($errors["email2"])) echo $errors["email2"];
+//    {
+//        $errors["email2"] = "email address cannot be empty";
+//    }
+//    
+//    
+//    // check mobile
+//    
+//    if(strlen($_POST["cust"]["mobile"]) < 2)
+//   {
+//       $errors["mobile1"] = "mobile number is invalid";
+//        echo $errors["mobile1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    
+//    if(empty($errors["mobile2"])) 
+//        echo $errors["mobile2"];
+//    {
+//        $errors["mobile2"] = "mobile number cannot be empty";
+//    }
+//    
+//    // check card
+//        if(strlen($_POST["cust"]["card"]) < 2)
+//   {
+//       $errors["card1"] = "card number is invalid";
+//        echo $errors["card1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    if(empty($errors["card2"])) 
+//        echo $errors["card2"];
+//    {
+//        $errors["card2"] = "credit card number cannot be empty";
+//    }
+//    
+//    
+//        // check expiry
+//    
+//        if(strlen($_POST["cust"]["expiry"]) < 2)
+//   {
+//       $errors["expiry1"] = "expiry date is invalid";
+//        echo $errors["expiry1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    if(empty($errors["expiry2"])) 
+//        echo $errors["expiry2"];
+//    {
+//        $errors["expiry2"] = "expiry date cannot be empty";
+//    }
+//    
+//    if(count($errors < 1) )
+//    
+//    {
+////    redirect to success page
+//    header("Location: order_complete.php");
+//    exit();
+//    
+//    }
+//    
+//   
+//}
+?>
 
     <header>
 
@@ -93,6 +359,8 @@ require_once("tools.php");
         </nav>
 
     </div>
+
+
 
 
     <main>
@@ -461,7 +729,8 @@ movieButtons();
             <!--            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" target="_blank"> -->
             <!--this is for making php information appear in the logging section of the page as per Trevor's guidance-->
             <!--            <form id="booking_form" name="myForm" onsubmit="logForm(); validateMobileInput(); validateCCInput(); validateNameInput()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">-->
-            <form id="booking_form" name="myForm" onsubmit="return validateMobileInput()" action="index.php" method="POST" target="_blank">
+            <!--            <form id="booking_form" name="myForm" action="index.php" method="POST" target="_blank">-->
+            <form id="booking_form" name="myForm" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="POST" target="_blank">
                 <!--            <form id="booking_form" name="myForm" onsubmit="return !!(logForm() & validateMobileInput() & validateCCInput() & validateNameInput());" action="index.php" method="POST" target="_blank">-->
 
 
@@ -583,34 +852,64 @@ movieButtons();
 
 
                         <fieldset>
-                            <label id="name" for="name">Name</label>\
                             
-                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name')" maxlength="20" value="<?php if(isset($_POST["cust"]["name"])) echo $_POST["cust"]["name"];?>"/>
                             
-                            <p>
-                            <?php if(isset($errors["name1"])) echo $errors["name1"];?>
-                            </p><!--                            ;validateNameInput()-->
+
+<?php
+    echo "<h3> PHP List All Session Variables</h3>";
+    foreach ($_SESSION as $key=>$val)
+    echo $key." ".$val."<br/>";
+?>
+
+
+                            
+                            <label id="name" for="name">Name</label>
+
+                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name')" maxlength="20" value="<?php echo $name;?>">
+
+
+                            <span class="error">*
+                                <?php echo $errors["name1"];?></span>
+
+
                             <br />
                             <label id="email" for="email">Email</label>
-                            <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')"  />
-                            <p>
-                                <?php if(isset($errors["email1"])) echo $errors["email1"];?>
-                            </p>
+                            <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')" value="<?php echo $email;?>">
+
+                            
+                            <span class="error">*
+                                <?php echo $errors["email1"];?></span>                            
+                            
+                            
+
                             <br />
                             <label id="mobile" for="mobile">Mobile</label>
-                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile')"  />
-                            <p>
-                                <?php if(isset($errors["card1"])) echo $errors["card1"];?>
-                            </p>
+                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile')" value="<?php echo $mobile;?>">
+
+
+                            
+                            <span class="error">*
+                                <?php echo $errors["mobile1"];?></span>                             
+
+
                             <br />
                             <label id="cc" for="credit card">Credit Card</label>
-                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc')"  />
-                            <p>
-                                <?php if(isset($errors["name1"])) echo $errors["name1"];?>
-                            </p>
+                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc')" value="<?php echo $card;?>">
+
+                            <span class="error">*
+                                <?php echo $errors["card1"];?></span>                             
+
+
                             <br />
                             <label id="expiry" for="expiry date">Expiry Date</label>
-                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')"  />
+                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')" value="<?php echo $expiry;?>">
+
+
+                        <span class="error">*
+                                <?php echo $errors["expiry1"];?></span>
+                        <span class="error">*
+                                <?php echo count($errors);?></span>        
+
                         </fieldset>
                         <br />
                         <fieldset>
@@ -618,6 +917,10 @@ movieButtons();
                             <!--                         <input id="output_total" type="text" name="total" maxlength="7" onblur="fieldValueOutput('output_total')" readonly/>-->
                             <input type="textbox" name="total" id="output_total" maxlength="7" onblur="fieldValueOutput('output_total')" readonly />
                             <button id="submit" type="submit" name="order" class="button" value="Submit">Order</button>
+
+                            <!--
+-->
+
                         </fieldset>
                     </fieldset>
 
@@ -637,7 +940,6 @@ movieButtons();
     <footer id="footer">
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
-
             </script>
             <!--            <button type="button" onclick="myFunction()">Try it</button>-->
 
@@ -656,9 +958,7 @@ movieButtons();
 
     </footer>
 
-    <?php
-print_footer();
-?>
+
     <hr class="line">
 
     <div>

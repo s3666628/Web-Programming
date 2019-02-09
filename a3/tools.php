@@ -16,157 +16,115 @@
 //    $errorsFound++;
 //    echo $errorsFound;
 //}
-
-if($_POST)
-{
-echo htmlspecialchars($_POST["movie"]["name"]);
-echo 'movie id: ' . htmlspecialchars($_POST["movie"]["id"])." ";
-echo 'movie day: ' . htmlspecialchars($_POST["movie"]["day"])." ";
-echo 'movie hour: ' . htmlspecialchars($_POST["movie"]["hour"])." ";
-    
-echo 'seats STA: ' . htmlspecialchars($_POST["seats"]["STA"])." ";
-echo 'seats STP: ' . htmlspecialchars($_POST["seats"]["STP"])." ";
-echo 'seats STC: ' . htmlspecialchars($_POST["seats"]["STC"])." ";
-    
-echo 'seats FCA: ' . htmlspecialchars($_POST["seats"]["FCA"])." ";
-echo 'seats FCP: ' . htmlspecialchars($_POST["seats"]["FCP"])." ";
-echo 'seats FCC: ' . htmlspecialchars($_POST["seats"]["FCC"])." ";
-    
-echo 'name : ' . htmlspecialchars($_POST["cust"]["name"])." ";
-echo 'email : ' . htmlspecialchars($_POST["cust"]["email"])." ";
-echo 'mobile : ' . htmlspecialchars($_POST["cust"]["mobile"])." ";
-echo 'card : ' . htmlspecialchars($_POST["cust"]["card"])." ";
-echo 'expiry : ' . htmlspecialchars($_POST["cust"]["expiry"])." ";
-echo 'total : ' . htmlspecialchars($_POST["total"])." "; 
-     
-}
-
-if($_POST)
-{
-
-    $errors = array();
-    echo "test count post =";
-    echo count($_POST); 
-    // check name
-    if(strlen($_POST["cust"]["name"]) < 2)
-   {
-       $errors["name1"] = "You must enter a name longer than one character";
-       echo $errors["name1"];
-   }
-//    echo count($errors)."errors count"; 
-    if(empty($errors["name1"])) echo $errors["name1"];
-    {
-        $errors["name2"] = "You must enter a name in the name field";
-    }
-
-    // check email
-    if(strlen($_POST["cust"]["email"]) < 2)
-   {
-       $errors["email1"] = "You must enter a proper email address";
-        echo $errors["email1"];
-   }
-//    echo count($errors)."errors count"; 
-    if(empty($errors["email2"])) echo $errors["email2"];
-    {
-        $errors["email2"] = "email address cannot be empty";
-    }
-    
-    
-    // check mobile
-    
-    if(strlen($_POST["cust"]["mobile"]) < 2)
-   {
-       $errors["mobile1"] = "mobile number is invalid";
-        echo $errors["mobile1"];
-   }
-//    echo count($errors)."errors count"; 
-    
-    if(empty($errors["mobile2"])) 
-        echo $errors["mobile2"];
-    {
-        $errors["mobile2"] = "mobile number cannot be empty";
-    }
-    
-    // check card
-        if(strlen($_POST["cust"]["card"]) < 2)
-   {
-       $errors["card1"] = "card number is invalid";
-        echo $errors["card1"];
-   }
-//    echo count($errors)."errors count"; 
-    if(empty($errors["card2"])) 
-        echo $errors["card2"];
-    {
-        $errors["card2"] = "credit card number cannot be empty";
-    }
-    
-    
-        // check expiry
-    
-        if(strlen($_POST["cust"]["expiry"]) < 2)
-   {
-       $errors["expiry1"] = "expiry date is invalid";
-        echo $errors["expiry1"];
-   }
-//    echo count($errors)."errors count"; 
-    if(empty($errors["expiry2"])) 
-        echo $errors["expiry2"];
-    {
-        $errors["expiry2"] = "expiry date cannot be empty";
-    }
-    
-    
-//echo "test messgage";
-
-//    if(empty($_POST["cust"]["email"]))
-//       {
-//           $errors["email1"] = "You must enter a email";
-//       }
-//    if(empty($_POST["cust"]["mobile"]))
-//        {
-//       $errors["mobile1"] = "You must enter a mobile number";
-//        }
-//    
-//    if(empty($_POST["cust"]["card"]))
-//       {
-//           $errors["card1"] = "You must enter a credit card";
-//       }
-//    if(empty($_POST["cust"]["expiry"]))
-//       {
-//           $errors["expiry1"] = "You must enter a date";
-//       } 
-//    if (count($errors==0))
-//    {
-//        //redirect to success page as no errors
-////        header("Location: order_complete.php");
-//        header("Location: order_complete.php");
-//        echo "no errors";
-//       exit();
 //
-//    }
-    
-    echo "TOTAL count errors = ";
-    echo count($errors); 
-}
-    
-    
-//$errors = array();
-//    
-//if(empty($_POST['cust']['name']))
+//if($_POST)
 //{
-//    $errors["cusomername1"] = "movie id is blank";
+//echo htmlspecialchars($_POST["movie"]["name"]);
+//echo 'movie id: ' . htmlspecialchars($_POST["movie"]["id"])." ";
+//echo 'movie day: ' . htmlspecialchars($_POST["movie"]["day"])." ";
+//echo 'movie hour: ' . htmlspecialchars($_POST["movie"]["hour"])." ";
+//    
+//echo 'seats STA: ' . htmlspecialchars($_POST["seats"]["STA"])." ";
+//echo 'seats STP: ' . htmlspecialchars($_POST["seats"]["STP"])." ";
+//echo 'seats STC: ' . htmlspecialchars($_POST["seats"]["STC"])." ";
+//    
+//echo 'seats FCA: ' . htmlspecialchars($_POST["seats"]["FCA"])." ";
+//echo 'seats FCP: ' . htmlspecialchars($_POST["seats"]["FCP"])." ";
+//echo 'seats FCC: ' . htmlspecialchars($_POST["seats"]["FCC"])." ";
+//    
+//echo 'name : ' . htmlspecialchars($_POST["cust"]["name"])." ";
+//echo 'email : ' . htmlspecialchars($_POST["cust"]["email"])." ";
+//echo 'mobile : ' . htmlspecialchars($_POST["cust"]["mobile"])." ";
+//echo 'card : ' . htmlspecialchars($_POST["cust"]["card"])." ";
+//echo 'expiry : ' . htmlspecialchars($_POST["cust"]["expiry"])." ";
+//echo 'total : ' . htmlspecialchars($_POST["total"])." "; 
+//     
 //}
 //
-//    
+//if($_POST)
+//{
 //
-//if(count($errors==0))
+//    $errors = array();
+//    echo "test count post =";
+//    echo count($_POST); 
+//    // check name
+//    if(strlen($_POST["cust"]["name"]) < 2)
+//   {
+//       $errors["name1"] = "You must enter a name longer than one character";
+//       echo $errors["name1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    if(empty($errors["name1"])) echo $errors["name1"];
+//    {
+//        $errors["name2"] = "You must enter a name in the name field";
+//    }
+//
+//    // check email
+//    if(strlen($_POST["cust"]["email"]) < 2)
+//   {
+//       $errors["email1"] = "You must enter a proper email address";
+//        echo $errors["email1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    if(empty($errors["email2"])) echo $errors["email2"];
+//    {
+//        $errors["email2"] = "email address cannot be empty";
+//    }
+//    
+//    
+//    // check mobile
+//    
+//    if(strlen($_POST["cust"]["mobile"]) < 2)
+//   {
+//       $errors["mobile1"] = "mobile number is invalid";
+//        echo $errors["mobile1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    
+//    if(empty($errors["mobile2"])) 
+//        echo $errors["mobile2"];
+//    {
+//        $errors["mobile2"] = "mobile number cannot be empty";
+//    }
+//    
+//    // check card
+//        if(strlen($_POST["cust"]["card"]) < 2)
+//   {
+//       $errors["card1"] = "card number is invalid";
+//        echo $errors["card1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    if(empty($errors["card2"])) 
+//        echo $errors["card2"];
+//    {
+//        $errors["card2"] = "credit card number cannot be empty";
+//    }
+//    
+//    
+//        // check expiry
+//    
+//        if(strlen($_POST["cust"]["expiry"]) < 2)
+//   {
+//       $errors["expiry1"] = "expiry date is invalid";
+//        echo $errors["expiry1"];
+//   }
+////    echo count($errors)."errors count"; 
+//    if(empty($errors["expiry2"])) 
+//        echo $errors["expiry2"];
+//    {
+//        $errors["expiry2"] = "expiry date cannot be empty";
+//    }
+//    
+//    if(count($errors < 1))
 //    
 //    {
-//    //redirect to success page
-////    header("Location: index.php");
+////    redirect to success page
+//    header("Location: order_complete.php");
 //    exit();
 //    
 //    }
+//    
+//   
 //}
 
 // Put your PHP functions and modules here

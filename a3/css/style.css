@@ -132,9 +132,11 @@ img {
 
 /*turn of sections of HTML by defult and then use JS to turn them on as needed*/
 
+/*
 #booking_form{
     display: none;
 }
+*/
 
 #synop_1, #book_buttons_1, #trailer_detail_1{
     display: none;
