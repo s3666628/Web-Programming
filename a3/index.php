@@ -457,12 +457,12 @@ movieButtons();
             <h2>Booking</h2>
 
             <hr class="line">
-
             <!--this was for testing purposes-->
             <!--            <form name="myForm" onsubmit="logForm()" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" target="_blank"> -->
             <!--this is for making php information appear in the logging section of the page as per Trevor's guidance-->
             <!--            <form id="booking_form" name="myForm" onsubmit="logForm(); validateMobileInput(); validateCCInput(); validateNameInput()" action="http://localhost:81/wp/a3/index.php" method="POST" target="_blank">-->
-            <form id="booking_form" name="myForm" onsubmit="return !!(logForm() & validateMobileInput() & validateCCInput() & validateNameInput());" action="index.php" method="POST" target="_blank">
+            <form id="booking_form" name="myForm" onsubmit="return validateMobileInput()" action="index.php" method="POST" target="_blank">
+                <!--            <form id="booking_form" name="myForm" onsubmit="return !!(logForm() & validateMobileInput() & validateCCInput() & validateNameInput());" action="index.php" method="POST" target="_blank">-->
 
 
                 <div>
@@ -583,20 +583,34 @@ movieButtons();
 
 
                         <fieldset>
-                            <label id="name" for="name">Name</label>
-                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name');validateNameInput()" maxlength="20" />
+                            <label id="name" for="name">Name</label>\
+                            
+                            <input id="input_name" type="text" name="cust[name]" onblur="fieldValueOutput('input_name')" maxlength="20" value="<?php if(isset($_POST["cust"]["name"])) echo $_POST["cust"]["name"];?>"/>
+                            
+                            <p>
+                            <?php if(isset($errors["name1"])) echo $errors["name1"];?>
+                            </p><!--                            ;validateNameInput()-->
                             <br />
                             <label id="email" for="email">Email</label>
-                            <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')" required />
+                            <input id="input_email" type="email" name="cust[email]" maxlength="200" onblur="fieldValueOutput('input_email')"  />
+                            <p>
+                                <?php if(isset($errors["email1"])) echo $errors["email1"];?>
+                            </p>
                             <br />
                             <label id="mobile" for="mobile">Mobile</label>
-                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile');validateMobileInput()" required />
+                            <input id="input_mobile" type="input_tel" name="cust[mobile]" maxlength="20" onblur="fieldValueOutput('input_mobile')"  />
+                            <p>
+                                <?php if(isset($errors["card1"])) echo $errors["card1"];?>
+                            </p>
                             <br />
                             <label id="cc" for="credit card">Credit Card</label>
-                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc');validateCCInput()" required />
+                            <input id="input_cc" type="text" name="cust[card]" maxlength="19" onblur="fieldValueOutput('input_cc')"  />
+                            <p>
+                                <?php if(isset($errors["name1"])) echo $errors["name1"];?>
+                            </p>
                             <br />
                             <label id="expiry" for="expiry date">Expiry Date</label>
-                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')" required />
+                            <input id="input_month" type="month" name="cust[expiry]" onblur="fieldValueOutput('input_month')"  />
                         </fieldset>
                         <br />
                         <fieldset>

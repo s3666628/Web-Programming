@@ -249,12 +249,15 @@ function testEventTarget(event) {
 function validateNameInput() {
     var user_name = document.getElementById("input_name").value;
     console.log(user_name + "Validate Name has been called");
-    var nameRGEX = /^[a-zA-Z \-.']{1,100}$/; //taken from tutorial answer
-    //    var phoneRGEX = /^0/;
+    var nameRGEX = /^[a-zA-Z \-.']{2,100}$/; //taken from tutorial answer
     var nameResult = nameRGEX.test(user_name);
-    console.log(user_name + "is called");
+    console.log(user_name + "validateNameInput Function has been called");
     if (nameResult == false) {
         alert("please enter a valid name");
+        console.log(user_name + "validateNameInput Function IF STATEMENT");
+    } else {
+        console.log(user_name + "validateNameInput Function ELSE STATEMENT");
+
         //    if (nameResult === false) {
         //        alert("name:" + nameResult);
         //    } else {
