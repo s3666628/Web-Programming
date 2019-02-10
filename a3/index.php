@@ -88,13 +88,16 @@ session_start();
 //echo 'total : ' . htmlspecialchars($_POST["total"])." ";     
 
 $name = $email = $mobile = $card = $expiry = "";
-//$nameErr = $emailErr = $mobileErr = $cardErr = $expiryErr = "";
+$mov_name = $mov_id = $mov_day = $mov_hour = "";
+$sta = $stp = $stc = $fca = $fcp = $fcc = "";
+$total ="";    
+$seats = array();    
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
      $errors = array();
 
+
 {
-    
     if (empty($_POST["movie"]["id"]))
     {
         $errors["movie_id"] = "Movie id is required";
@@ -103,21 +106,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     
     else 
     {
-    $name = test_input($_POST["movie"]["name"]);
+    $mov_id = test_input($_POST["movie"]["id"]);
     }
     
     
     if (empty($_POST["movie"]["day"]))
     {
-        $errors["movie_day"] = "Movie id is required";
+        $errors["movie_day"] = "Movie day is required";
         echo "Movie day is required";
     }
     
     else 
     {
-    $name = test_input($_POST["movie"]["day"]);
+    $mov_day = test_input($_POST["movie"]["day"]);
     }
-    
     
     if (empty($_POST["movie"]["hour"]))
     {
@@ -127,23 +129,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     
     else 
     {
-    $name = test_input($_POST["movie"]["hour"]);
+    $mov_hour = test_input($_POST["movie"]["hour"]);
     }
 
     
-        
-//    if (empty($_POST["movie"]["hour"]))
-//    {
-//        $errors["movie_hour"] = "Movie hour is required";
-//    }
-//    
-//    else 
-//    {
-//    $name = test_input($_POST["movie"]["hour"]);
-//    }
 
-    
-    
     
     if (empty($_POST["cust"]["name"]))
     {
@@ -204,35 +194,87 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $expiry = test_input($_POST["cust"]["expiry"]);
 
     }
-    if (count($errors) ==0)
+    
+    if (empty($_POST["total"]))
     {
-//$name = $email = $mobile = $card = $expiry = "";        
+        $expiryErr = "PLEASE SELECT at leat 1 seat";
+        $errors["seats1"] = "SEATS is required";
+    }
+    
+    else
+    {
+        
+    $seats["seats1"] = ($_POST["seats"]["STA"]);
+    $seats["seats2"] = ($_POST["seats"]["STP"]);
+    $seats["seats3"] = ($_POST["seats"]["STC"]);
+    $seats["seats4"] = ($_POST["seats"]["FCA"]);
+    $seats["seats5"] = ($_POST["seats"]["FCP"]);
+    $seats["seats6"] = ($_POST["seats"]["FCC"]);
+    
+    $total = test_input($_POST["total"]);    
+        
+
+    }
+    
+    //echo 'seats STA: ' . htmlspecialchars($_POST["seats"]["STA"])." ";
+//echo 'seats STP: ' . htmlspecialchars($_POST["seats"]["STP"])." ";
+//echo 'seats STC: ' . htmlspecialchars($_POST["seats"]["STC"])." ";
+//    
+//echo 'seats FCA: ' . htmlspecialchars($_POST["seats"]["FCA"])." ";
+//echo 'seats FCP: ' . htmlspecialchars($_POST["seats"]["FCP"])." ";
+//echo 'seats FCC: ' . htmlspecialchars($_POST["seats"]["FCC"])." ";
+
+
+    if (count($errors) ==0 and count($seats) > 0)
+    {
+
+    // customer information
     $_SESSION['cust']['name'] = $name;
     $_SESSION['cust']['email'] = $email;    
     $_SESSION['cust']['mobile'] = $mobile;    
     $_SESSION['cust']['card'] = $card;    
-    $_SESSION['cust']['$expiry'] = $expiry;        
+    $_SESSION['cust']['expiry'] = $expiry; 
+        
+    //movie information 
+//    $_SESSION['movie']['name'] = $mov_name;
+    $_SESSION['movie']['id'] = $mov_id;    
+    $_SESSION['movie']['day'] = $mov_day;    
+    $_SESSION['movie']['hour'] = $mov_hour;    
+        
+//    $_SESSION['seats']['STA'] = $sta;    
+//    $_SESSION['seats']['STP'] = $stp;    
+//    $_SESSION['seats']['STC'] = $stc;
+//    
+//    $_SESSION['seats']['FCA'] = $fca;    
+//    $_SESSION['seats']['FCP'] = $fcp;    
+//    $_SESSION['seats']['FCC'] = $fcc;    
+  
+        
+    $_SESSION['seats']['STA'] = $seats["seats1"];    
+    $_SESSION['seats']['STP'] = $seats["seats2"];    
+    $_SESSION['seats']['STC'] = $seats["seats3"];
+    
+    $_SESSION['seats']['FCA'] = $seats["seats4"];    
+    $_SESSION['seats']['FCP'] = $seats["seats5"];    
+    $_SESSION['seats']['FCC'] = $seats["seats6"]; 
+    
+    $_SESSION['total'] = $total;     
+        
+    //echo htmlspecialchars($_POST["movie"]["name"]);
+//echo 'movie id: ' . htmlspecialchars($_POST["movie"]["id"])." ";
+//echo 'movie day: ' . htmlspecialchars($_POST["movie"]["day"])." ";
+//echo 'movie hour: ' . htmlspecialchars($_POST["movie"]["hour"])." ";    
     header("Location: order_complete.php");
     exit();
     }
     
 }
     
-//        if(count($errors < 1))
-//    
-//    {
-////    redirect to success page
-//    header("Location: order_complete.php");
-//    exit();
-//    
-//    }
-    
-//  $name = test_input($_POST["cust"]["name"]);
-//  $email = test_input($_POST["cust"]["email"]);    
-//  $mobile = test_input($_POST["cust"]["mobile"]);
-//  $card = test_input($_POST["cust"]["card"]);
-//  $expiry = test_input($_POST["cust"]["expiry"]);
+
 //}
+    //sanitise data - taken from example on W3 schools
+    
+//    https://www.w3schools.com/php/php_form_validation.asp
 
 function test_input($data) {
   $data = trim($data);
@@ -241,91 +283,7 @@ function test_input($data) {
   return $data;
 }
 
-//if($_POST)
-//{
-//
-//    $errors = array();
-//    echo "test count post =";
-//    echo count($_POST); 
-//    // check name
-//    if(strlen($_POST["cust"]["name"]) < 2)
-//   {
-//       $errors["name1"] = "You must enter a name longer than one character";
-//       echo $errors["name1"];
-//   }
-////    echo count($errors)."errors count"; 
-//    if(empty($errors["name1"])) echo $errors["name1"];
-//    {
-//        $errors["name2"] = "You must enter a name in the name field";
-//    }
-//
-//    // check email
-//    if(strlen($_POST["cust"]["email"]) < 2)
-//   {
-//       $errors["email1"] = "You must enter a proper email address";
-//        echo $errors["email1"];
-//   }
-////    echo count($errors)."errors count"; 
-//    if(empty($errors["email2"])) echo $errors["email2"];
-//    {
-//        $errors["email2"] = "email address cannot be empty";
-//    }
-//    
-//    
-//    // check mobile
-//    
-//    if(strlen($_POST["cust"]["mobile"]) < 2)
-//   {
-//       $errors["mobile1"] = "mobile number is invalid";
-//        echo $errors["mobile1"];
-//   }
-////    echo count($errors)."errors count"; 
-//    
-//    if(empty($errors["mobile2"])) 
-//        echo $errors["mobile2"];
-//    {
-//        $errors["mobile2"] = "mobile number cannot be empty";
-//    }
-//    
-//    // check card
-//        if(strlen($_POST["cust"]["card"]) < 2)
-//   {
-//       $errors["card1"] = "card number is invalid";
-//        echo $errors["card1"];
-//   }
-////    echo count($errors)."errors count"; 
-//    if(empty($errors["card2"])) 
-//        echo $errors["card2"];
-//    {
-//        $errors["card2"] = "credit card number cannot be empty";
-//    }
-//    
-//    
-//        // check expiry
-//    
-//        if(strlen($_POST["cust"]["expiry"]) < 2)
-//   {
-//       $errors["expiry1"] = "expiry date is invalid";
-//        echo $errors["expiry1"];
-//   }
-////    echo count($errors)."errors count"; 
-//    if(empty($errors["expiry2"])) 
-//        echo $errors["expiry2"];
-//    {
-//        $errors["expiry2"] = "expiry date cannot be empty";
-//    }
-//    
-//    if(count($errors < 1) )
-//    
-//    {
-////    redirect to success page
-//    header("Location: order_complete.php");
-//    exit();
-//    
-//    }
-//    
-//   
-//}
+
 ?>
 
     <header>
@@ -423,62 +381,6 @@ function test_input($data) {
             <?php
 movieTable();
 ?>
-
-
-            <!--
-            <table>
-                <tr>
-                    <th>Seat Type</th>
-                    <th>Seat Code</th>
-                    <th>All day Monday and Wednesday AND 12pm on Weekday</th>
-                    <th>All other times</th>
-                </tr>
-                <tr>
-                    <th>Standard Adult</th>
-                    <td>STA</td>
-                    <td>$ 14.00</td>
-                    <td>$ 19.80</td>
-
-                </tr>
-                <tr>
-                    <th>Standard Concession</th>
-                    <td>STP</td>
-                    <td>$ 12.50</td>
-                    <td>$ 17.50</td>
-
-                </tr>
-                <tr>
-                    <th>Standard Child</th>
-                    <td>STC</td>
-                    <td>$ 11.00</td>
-                    <td>$ 15.30</td>
-
-                </tr>
-                <tr>
-                    <th>First Class Adult</th>
-                    <td>FCA</td>
-                    <td>$ 24.00</td>
-                    <td>$ 30.00</td>
-
-                </tr>
-                <tr>
-                    <th>First Class Concession</th>
-                    <td>FCP</td>
-                    <td>$ 22.50</td>
-                    <td>$ 27.00</td>
-
-                </tr>
-                <tr>
-                    <th>First Class Child</th>
-                    <td>FCC</td>
-                    <td>$ 21.00</td>
-                    <td>$ 24.00</td>
-
-                </tr>
-            </table>
--->
-
-
 
         </article>
         <article id="showing" class="ib">
